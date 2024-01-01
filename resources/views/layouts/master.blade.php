@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="side-panel">
 	<head>
 
 		<!-- Basic -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">	
-        
+
+		<title>Website SMKN 1 Sempol</title>	
+
+		<meta name="author" content="okler.net">
+		<meta name="csrf-token" content="{{ csrf_token() }}">
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="{{ asset('assets/img/favicon.ico') }}" type="image/x-icon" />
 		<link rel="apple-touch-icon" href="{{ asset('assets/img/apple-touch-icon.png') }}">
@@ -25,6 +28,7 @@
 		<link rel="stylesheet" href="{{ asset('assets/vendor/owl.carousel/assets/owl.carousel.min.css') }}">
 		<link rel="stylesheet" href="{{ asset('assets/vendor/owl.carousel/assets/owl.theme.default.min.css') }}">
 		<link rel="stylesheet" href="{{ asset('assets/vendor/magnific-popup/magnific-popup.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('assets/vendor/twentytwenty/css/twentytwenty.css') }}">
 
 		<!-- Theme CSS -->
 		<link rel="stylesheet" href="{{ asset('assets/css/theme.css') }}">
@@ -33,123 +37,195 @@
 		<link rel="stylesheet" href="{{ asset('assets/css/theme-shop.css') }}">
 
 		<!-- Demo CSS -->
-		<link rel="stylesheet" href="{{ asset('assets/css/demos/demo-education.css') }}">
+		<link rel="stylesheet" href="{{ asset('assets/css/demos/demo-dentist.css') }}">
 
 		<!-- Skin CSS -->
-		<link id="skinCSS" rel="stylesheet" href="{{ asset('assets/css/skins/skin-education.css') }}">
+		<link id="skinCSS" rel="stylesheet" href="{{ asset('assets/css/skins/skin-dentist.css') }}">
 
-		{{-- <!-- Theme Custom CSS -->
-		<link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}"> --}}
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
 
-        @stack('css')
-        <!-- Document Title
-        ============================================= -->
-        @yield('title')
-        <title>Website SMKN 1 Sempol</title>
+		@stack('css')
+		<!-- Document Title
+		============================================= -->
+		@yield('title')
+		{{-- <title>Website SMKN 1 Sempol Bondowoso</title> --}}
+
 	</head>
-	<body>
+	<body data-plugin-cursor-effect data-plugin-page-transition>
+		<div class="side-panel-wrapper">
+			<button class="hamburguer-btn side-panel-close side-panel-toggle active" data-set-active="false">
+				<span class="close">
+					<span></span>
+					<span></span>
+				</span>
+			</button>
+			{{-- <div class="pt-5">
+				<a href="#">
+					<img alt="#" width="123" height="32" src="{{ asset('assets/img/sempol/logo.png') }}">
+				</a>
+				<p class="py-4 mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi velit turpis, tincidunt ut</p>
+				<h4 class="text-color-primary text-4">Get In Touch</h4>
+				<ul class="list list-icons font-weight-semibold text-color-default text-2-5">
+					<li>
+						<i class="icon-location-pin icons text-color-tertiary top-7"></i> Jl. Raya Kawah Ijen, Kab. Bondowoso
+					</li>
+					<li>
+						<i class="icon-envelope icons text-color-tertiary top-7"></i> <a href="#" class="text-color-default text-color-hover-tertiary text-decoration-none">mail@domain.com</a>
+					</li>
+					<li>
+						<i class="icon-clock icons text-color-tertiary top-7"></i> Mon - Sat 9:00am - 6:00pm / Sunday - CLOSED
+					</li>
+					<li>
+						<i class="icon-phone icons text-color-tertiary top-7"></i> <a href="#" class="text-color-default text-color-hover-tertiary text-decoration-none">123-456-7890</a>
+					</li>
+				</ul>
 
+				<a href="demo-dentist-contact.html#book" class="btn w-100  btn-secondary border-0 text-2-5 font-weight-semi-bold btn-px-4 btn-py-3 my-3">Book Appointment</a>
+
+				<h4 class="text-color-primary text-4 pt-3">Follow Us</h4>
+				<ul class="social-icons social-icons-clean social-icons-medium">
+					<li class="social-icons-facebook">
+						<a href="http://www.facebook.com/" target="_blank" title="Facebook">
+							<i class="fab fa-facebook-f"></i>
+						</a>
+					</li>
+					<li class="social-icons-twitter">
+						<a href="http://www.twitter.com/" target="_blank" title="Twitter">
+							<i class="fab fa-twitter"></i>
+						</a>
+					</li>
+					<li class="social-icons-instagram">
+						<a href="http://www.instagram.com/" target="_blank" title="Instagram">
+							<i class="fab fa-instagram"></i>
+						</a>
+					</li>
+					<li class="social-icons-linkedin">
+						<a href="http://www.linkedin.com/" target="_blank" title="Linkedin">
+							<i class="fab fa-linkedin"></i>
+						</a>
+					</li>
+				</ul>
+			</div> --}}
+		</div>
 		<div class="body">
-			<header id="header" class="header-transparent header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 70, 'stickyHeaderContainerHeight': 70}">
-				<div class="header-body header-body-bottom-border border-top-0">
-					<div class="header-top bg-light border-0">
-						<div class="container">
-							<div class="header-row">
+			<header id="header" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': false, 'stickyStartAt': 53, 'stickySetTop': '-53px'}">
+				<div class="header-body border-top-0 h-auto box-shadow-none">
+					<div class="header-top border-width-1">
+						<div class="container-fluid px-lg-5 h-100">
+							<div class="header-row h-100">
 								<div class="header-column justify-content-start">
 									<div class="header-row">
-										<ul class="list list-unstyled list-inline mb-0">
-											<li class="list-inline-item text-color-dark me-md-4 mb-0 d-none d-md-inline-block">
-												<span class="text-color-default text-2">Website SMKN 1 Sempol</span>
-											</li>
-											<li class="list-inline-item me-4 mb-0">
-												<i class="icons icon-phone text-color-primary text-4 position-relative top-4 me-1"></i>
-												<a href="tel:+1234567890" class="text-color-secondary text-color-hover-primary font-weight-semibold text-decoration-none text-2">
-													(800) 123-4567
-												</a>
-											</li>
-											<li class="list-inline-item me-4 mb-0 d-none d-md-inline-block">
-												<i class="icons icon-envelope text-color-primary text-4 position-relative top-4 me-1"></i>
-												<a href="mailto:porto@portotheme.com" class="text-color-secondary text-color-hover-primary font-weight-semibold text-decoration-none text-2">
-													porto@portotheme.com
-												</a>
-											</li>
-										</ul>
+										<nav class="header-nav-top">
+											<ul class="nav nav-pills">
+												<li class="nav-item py-2 d-none d-sm-inline-flex pe-2">
+													<span class="ps-0 font-weight-semibold text-color-default text-2">
+													<i class="text-color-tertiary p-relative top-3 text-4-5"></i> SMKN 1 Sempol, Kab. Bondowoso</span>
+												</li>
+											</ul>
+										</nav>
 									</div>
 								</div>
 								<div class="header-column justify-content-end">
 									<div class="header-row">
-										<ul class="list list-unstyled list-inline mb-0">
-											<li class="list-inline-item mb-0">
-												<i class="icons icon-user text-color-primary text-4 position-relative top-4 me-1"></i>
-												<a href="page-login.html" class="text-color-secondary text-color-hover-primary font-weight-semibold text-decoration-none text-2">
-													Login / Register
-												</a>
-											</li>
-										</ul>
+										<nav class="header-nav-top">
+											<ul class="nav nav-pills p-relative bottom-2">
+												<li class="nav-item py-2 d-none d-md-inline-flex">
+													<a href="mailto:mail@domain.com" class="text-2 font-weight-semibold text-color-default text-color-hover-tertiary">
+														<i class="icon-envelope icons text-color-tertiary p-relative top-3 text-4-5"></i> smkn1_sempol@yahoo.co.id</a>
+												</li>
+												<li class="nav-item py-2 d-none d-sm-inline-flex pe-2">
+													<span class="ps-0 font-weight-semibold text-color-default text-2">
+													<i class="icon-location-pin icons text-color-tertiary p-relative top-3 text-4-5"></i> Jl. Raya Kawah Ijen, Kab. Bondowoso</span>
+												</li>
+											</ul>
+										</nav>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="header-container container">
+					<div class="header-container header-container-height-sm container-fluid px-lg-5 p-static">
 						<div class="header-row">
 							<div class="header-column">
 								<div class="header-row">
 									<div class="header-logo">
-										<a href="demo-education.html">
-											<img src="{{ asset('assets/img/demos/education/logo.png') }}" class="img-fluid" width="123" height="49" alt="" />
+										<a href="#">
+											<img width="123" height="62" src="{{ asset('assets/img/sempol/logo.png') }}">
 										</a>
 									</div>
 								</div>
 							</div>
-							<div class="header-column justify-content-end">
+							<div class="header-column justify-content-end justify-content-lg-center w-155">
 								<div class="header-row">
-									<div class="header-nav header-nav-links">
-										<div class="header-nav-main header-nav-main-text-capitalize header-nav-main-effect-2 header-nav-main-sub-effect-1">
+									<div class="header-nav header-nav-line header-nav-bottom-line header-nav-bottom-line-effect-1 justify-content-lg-center ps-lg-5">
+										<div class="header-nav-main header-nav-main-square header-nav-main-text-capitalize header-nav-main-text-size-4 header-nav-main-dropdown-no-borders header-nav-main-arrows header-nav-main-full-width-mega-menu header-nav-main-mega-menu-bg-hover header-nav-main-effect-2">
 											<nav class="collapse">
 												<ul class="nav nav-pills" id="mainNav">
-													<li>
-														<a href="#" class="nav-link active">Home</a>
+													<li class="dropdown">
+														<a href="{{ url('/') }}" class="nav-link dropdown-toggle">Beranda</a>
+														<ul class="dropdown-menu">
+															<li><a href="{{ url('berita') }}" class="dropdown-item">Berita</a></li>
+															<li><a href="{{ url('gallery') }}" class="dropdown-item">Gallery</a></li>
+															<li><a href="{{ url('media') }}" class="dropdown-item">Video</a></li>
+														</ul>
+													</li>
+													<li class="dropdown">
+														<a href="#" class="nav-link dropdown-toggle">Profil</a>
+														<ul class="dropdown-menu">
+															<li><a href="{{ url('tentangsekolah') }}" class="dropdown-item">Tentang Sekolah</a></li>
+															<li><a href="{{ url('visidanmisi') }}" class="dropdown-item">Visi dan Misi</a></li>
+															<li><a href="{{ url('kepala') }}" class="dropdown-item">Kepala Sekolah</a></li>
+															<li><a href="{{ url('pejabat') }}" class="dropdown-item">Wakil Kepala Sekolah</a></li>
+															<li><a href="{{ url('jurusan') }}" class="dropdown-item">Kompetensi Keahlian</a></li>
+															<li><a href="{{ url('achievement') }}" class="dropdown-item">Prestasi Sekolah</a></li>
+														</ul>
+													</li>
+													<li class="dropdown">
+														<a href="#" class="nav-link dropdown-toggle">Data</a>
+														<ul class="dropdown-menu">
+															<li><a href="{{ url('gurusekolah') }}" class="dropdown-item">Guru</a></li>
+															<li><a href="{{ url('tenagapendidik') }}" class="dropdown-item">Tenaga Pendidik</a></li>
+															<li><a href="{{ url('siswasekolah') }}" class="dropdown-item">Siswa</a></li>
+														</ul>
+													</li>
+													<li class="dropdown">
+														<a href="#" class="nav-link dropdown-toggle">Info</a>
+														<ul class="dropdown-menu">
+															<li><a href="{{ url('infosekolah') }}" class="dropdown-item">Pengumuman</a></li>
+															<li><a href="{{ url('agendasekolah') }}" class="dropdown-item">Agenda Kegiatan</a></li>
+															<li><a href="{{ url('jadwalmapel') }}" class="dropdown-item">Jadwal Pelajaran</a></li>
+															<li><a href="{{ url('jadwalexam') }}" class="dropdown-item">Jadwal Ujian</a></li>
+															<li><a href="{{ url('ekskul') }}" class="dropdown-item">Ekstrakurikuler</a></li>
+														</ul>
+													</li>
+													<li class="dropdown">
+														<a href="demo-dentist-services.html" class="nav-link dropdown-toggle">OSIS</a>
+														<ul class="dropdown-menu">
+															<li><a href="{{ url('tentangosis') }}" class="dropdown-item">Tentang OSIS</a></li>
+															<li><a href="{{ url('pengurus') }}" class="dropdown-item">Pengurus OSIS</a></li>
+															<li><a href="{{ url('kegosis') }}" class="dropdown-item">Kegiatan OSIS</a></li>
+														</ul>
+													</li>
+													<li class="dropdown">
+														<a href="demo-dentist-services.html" class="nav-link dropdown-toggle">Literasi</a>
+														<ul class="dropdown-menu">
+															<li><a href="#" class="dropdown-item">Daftar Buku</a></li>
+															<li><a href="#" class="dropdown-item">Video Pembelajaran</a></li>
+														</ul>
 													</li>
 													<li>
-														<a href="demo-education-about-us.html" class="nav-link">About Us</a>
-													</li>
-													<li>
-														<a href="demo-education-courses.html" class="nav-link">Courses</a>
-													</li>
-													<li>
-														<a href="demo-education-instructors.html" class="nav-link">Instructors</a>
-													</li>
-													<li>
-														<a href="demo-education-blog.html" class="nav-link">Blog</a>
-													</li>
-													<li>
-														<a href="demo-education-contact-us.html" class="nav-link">Contact Us</a>
+														<a href="#" class="nav-link active">
+															Login
+														</a>
 													</li>
 												</ul>
 											</nav>
 										</div>
+										<button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">
+											<i class="fas fa-bars"></i>
+										</button>
 									</div>
-									<div class="header-nav-features header-nav-features-no-border">
-										<div class="header-nav-feature header-nav-features-search d-inline-flex">
-											<a href="#" class="header-nav-features-toggle text-decoration-none" data-focus="headerSearch" aria-label="Search">
-												<i class="icons icon-magnifier header-nav-top-icon font-weight-bold text-4 top-2 text-color-primary"></i>
-											</a>
-											<div class="header-nav-features-dropdown header-nav-features-dropdown-mobile-fixed" id="headerTopSearchDropdown">
-												<form role="search" action="page-search-results.html" method="get">
-													<div class="simple-search input-group">
-														<input class="form-control text-1" id="headerSearch" name="q" type="search" value="" placeholder="Search...">
-														<button class="btn" type="submit" aria-label="Search">
-															<i class="icons icon-magnifier header-nav-top-icon font-weight-bold text-color-dark text-4 text-color-hover-primary top-2"></i>
-														</button>
-													</div>
-												</form>
-											</div>
-										</div>
-									</div>
-									<button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">
-										<i class="fas fa-bars"></i>
-									</button>
 								</div>
 							</div>
 						</div>
@@ -157,48 +233,47 @@
 				</div>
 			</header>
 
+			<!-- Content
+    		============================================= -->
+    		<section id="content">
+
+       			 <div class="content-wrap p-0 mb-4">
+           		 @yield('content')
+        		</div>
+    		</section>
+
 			<div role="main" class="main">
 
-				<div class="custom-bg-color-grey-1">
-					<div class="owl-carousel owl-carousel-light owl-carousel-light-init-fadeIn owl-theme manual dots-inside dots-horizontal-center show-dots-hover show-dots-xs nav-style-1 nav-arrows-thin nav-inside nav-inside-plus nav-dark nav-lg nav-font-size-lg show-nav-hover mb-0" data-plugin-options="{'autoplay': true, 'autoplayTimeout': 7000}" data-dynamic-height="['calc(100vh - 135px)','calc(100vh - 135px)','calc(100vh - 161px)','calc(100vh - 161px)','calc(100vh - 161px)']" style="height: calc(100vh - 135px);">
+				<div class="p-relative">
+					<div class="owl-carousel owl-carousel-light owl-carousel-light-init-fadeIn owl-theme manual nav-style-1 nav-arrows-thin nav-font-size-lg custom-nav-1 custom-nav-1-pos-1 p-relative mb-0" data-plugin-options="{'autoplay': true, 'autoplayTimeout': 7000}" data-dynamic-height="['calc(100vh - 305px)','calc(100vh - 305px)','calc(100vh - 305px)','calc(100vh - 305px)','calc(100vh - 305px)']" style="height: calc(100vh - 305px);">
 						<div class="owl-stage-outer">
 							<div class="owl-stage">
 
 								<!-- Carousel Slide 1 -->
-								<div class="owl-item position-relative overflow-hidden">
-									<div class="background-image-wrapper custom-bg-color-grey-1 position-absolute top-0 left-0 right-0 bottom-0" data-appear-animation="kenBurnsToLeft" data-appear-animation-duration="30s" data-plugin-options="{'minWindowWidth': 0}" data-carousel-onchange-show style="background-image: url(img/demos/education/slides/slide-1-bg.jpg); background-size: cover; background-position: 100% 100%;">
-									</div>
+								<div class="owl-item p-relative overflow-hidden">
+									<div class="background-image-wrapper p-absolute d-none d-lg-block w-100 h-100 top-0 right-0 bottom-0" style="background-image: url(img/demos/dentist/slides/slide-dentist-1-1.jpg); background-size: cover; max-width: 50vw;"></div>
 
-									<img src="{{ asset('assets/img/demos/education/slides/slide-1-1.png') }}" class="img-fluid position-absolute bottom-0 d-none d-lg-block custom-slider-el-1 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600" alt="" />
+									<div class="background-image-wrapper p-absolute w-100 h-100 top-0 left-0 bottom-0" style="background-image: url(img/demos/dentist/slides/slide-dentist-1-2.jpg); background-size: cover; max-width: 50vw;"></div>
 
-									<div class="container h-100 r-relative z-index-1">
-										<div class="row h-100 align-items-center">
-											<div class="col">
-												<div class="text-end float-lg-start custom-slider-text-block">
-													<h2 class="text-color-secondary font-weight-extra-bold mb-4 custom-slider-text-1 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800"><em>#</em>letslearn</h2>
-													<h2 class="text-color-default font-weight-semi-bold mb-3 text-5 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1000">Complete Solution For Your Education Needs!</h2>
-													<a href="#courses" data-hash data-hash-offset="0" data-hash-offset-lg="70" class="btn btn-secondary font-weight-bold btn-px-5 btn-py-3 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1200">GET STARTED</a>
-												</div>
+									<div class="container p-relative z-index-3 h-100">
+										<div class="row align-items-center h-100">
+											<div class="col-lg-8 col-xl-6 text-center text-md-start">
+												<h2 class="font-weight-semi-bold text-color-dark text-9 text-md-12 line-height-2 mb-3 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="200" data-plugin-options="{'minWindowWidth': 0}">Affordable Full-Service Dental Care in LA</h2>
+												<p class="font-weight-medium text-4-5 line-height-5 mb-2 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="400" data-plugin-options="{'minWindowWidth': 0}">Lorem ipsum dolor sit amet, consectetur adipiscing elit vestibulum sed euismod dui.</p>
 											</div>
 										</div>
 									</div>
 								</div>
 
 								<!-- Carousel Slide 2 -->
-								<div class="owl-item position-relative overflow-hidden">
-									<div class="background-image-wrapper custom-bg-color-grey-1 position-absolute top-0 left-0 right-0 bottom-0" data-appear-animation="kenBurnsToLeft" data-appear-animation-duration="30s" data-plugin-options="{'minWindowWidth': 0}" data-carousel-onchange-show style="background-image: url(img/demos/education/slides/slide-2-bg.jpg); background-size: cover; background-position: 100% 100%;">
-									</div>
+								<div class="owl-item p-relative overflow-hidden">
+									<div class="background-image-wrapper p-absolute d-none d-lg-block w-100 h-100 top-0 right-0 bottom-0" style="background-image: url(img/demos/dentist/slides/slide-dentist-2-1.jpg); background-size: cover;"></div>
 
-									<img src="{{ asset('assets/img/demos/education/slides/slide-2-1.png') }}" class="img-fluid position-absolute bottom-0 d-none d-lg-block custom-slider-el-2 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600" alt="" />
-
-									<div class="container h-100 r-relative z-index-1">
-										<div class="row h-100 align-items-center">
-											<div class="col">
-												<div class="float-lg-end custom-slider-text-block text-end">
-													<h2 class="text-color-secondary font-weight-extra-bold mb-4 custom-slider-text-1 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800"><em>#</em>yourfuture</h2>
-													<h2 class="text-color-default font-weight-semi-bold mb-3 text-5 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1000">Complete Solution For Your Education Needs!</h2>
-													<a href="#courses" data-hash data-hash-offset="0" data-hash-offset-lg="70" class="btn btn-secondary font-weight-bold btn-px-5 btn-py-3 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1200">GET STARTED</a>
-												</div>
+									<div class="container p-relative z-index-3 h-100">
+										<div class="row align-items-center justify-content-end h-100">
+											<div class="col-lg-8 col-xl-6 text-center text-md-start">
+												<h2 class="font-weight-semi-bold text-color-dark text-9 text-md-12 line-height-2 mb-3 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="200" data-plugin-options="{'minWindowWidth': 0}">Dental Care in LA Affordable Full-Service</h2>
+												<p class="font-weight-medium text-4-5 line-height-5 mb-2 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="400" data-plugin-options="{'minWindowWidth': 0}">Lorem ipsum dolor sit amet, consectetur adipiscing elit vestibulum sed euismod dui.</p>
 											</div>
 										</div>
 									</div>
@@ -211,613 +286,657 @@
 							<button type="button" role="presentation" class="owl-next" aria-label="Next"></button>
 						</div>
 					</div>
+
+					<div class="p-absolute custom-el-pos-1 d-none d-xl-block z-index-2">
+						<img width="353" height="407" src="img/demos/dentist/generic/generic-3.svg" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-tertiary'}" />
+					</div>
+
+					<div class="p-absolute custom-el-pos-2 rotate-l-65 d-none d-xl-block z-index-2">
+						<img width="330" height="346" src="img/demos/dentist/generic/generic-4.svg" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary'}" />
+					</div>
 				</div>
 
-				<div class="bg-light">
-					<div class="container py-4">
-						<div class="row pb-2 mb-1">
-							<div class="col-md-4 mb-4 mb-md-0">
-
-								<div class="feature-box feature-box-steps">
-									<div class="feature-box-step-number appear-animation" data-appear-animation="fadeInLeftShorterPlus" data-appear-animation-delay="250">
-										<em>1.</em>
-									</div>
-									<div class="feature-box-icon bg-color-quaternary feature-box-icon-extra-large appear-animation" data-appear-animation="fadeInLeftShorterPlus" data-appear-animation-delay="250">
-										<img class="icon-animated" width="100" height="46" src="{{ asset('assets/img/demos/education/icons/icon-web-search-engine.svg') }}" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary'}" />
-									</div>
-									<div class="feature-box-info appear-animation" data-appear-animation="fadeInLeftShorterPlus" data-appear-animation-delay="150">
-										<p class="mt-2 pt-1 mb-0 text-1 p-relative top-5 text-uppercase">Step 1</p>
-										<h4 class="mb-0 text-color-secondary">Find Your Course</h4>
-									</div>
-								</div>
-
+				<div id="home-intro" class="home-intro bg-primary p-relative z-index-3 m-0">
+					<div class="container py-2">
+						<div class="row align-items-center text-center text-md-start">
+							<div class="col-lg-9 mb-3 mb-lg-0">
+								<p class="text-color-light text-4-5 font-weight-medium line-height-4 mb-0">
+									<strong>Book Appointment Online</strong> - Need Immediate Confirmation? Call Us at <u>888-123-4567</u>
+								</p>
 							</div>
-							<div class="col-md-4 mb-4 mb-md-0">
-
-								<div class="feature-box feature-box-steps">
-									<div class="feature-box-step-number appear-animation" data-appear-animation="fadeInLeftShorterPlus" data-appear-animation-delay="500">
-										<em>2.</em>
-									</div>
-									<div class="feature-box-icon bg-color-quaternary feature-box-icon-extra-large appear-animation" data-appear-animation="fadeInLeftShorterPlus" data-appear-animation-delay="500">
-										<img class="icon-animated" width="42" height="42" src="{{ asset('assets/img/demos/education/icons/icon-list.svg') }}" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary ms-2'}" />
-									</div>
-									<div class="feature-box-info appear-animation" data-appear-animation="fadeInLeftShorterPlus" data-appear-animation-delay="300">
-										<p class="mt-2 pt-1 mb-0 text-1 p-relative top-5 text-uppercase">Step 2</p>
-										<h4 class="mb-0 text-color-secondary">Make a Register</h4>
-									</div>
-								</div>
-
-							</div>
-							<div class="col-md-4">
-
-								<div class="feature-box feature-box-steps">
-									<div class="feature-box-step-number appear-animation" data-appear-animation="fadeInLeftShorterPlus" data-appear-animation-delay="750">
-										<em>3.</em>
-									</div>
-									<div class="feature-box-icon bg-color-quaternary feature-box-icon-extra-large appear-animation" data-appear-animation="fadeInLeftShorterPlus" data-appear-animation-delay="750">
-										<img class="icon-animated" width="45" height="45" src="{{ asset('assets/img/demos/education/icons/icon-laptop.svg') }}" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary'}" />
-									</div>
-									<div class="feature-box-info appear-animation" data-appear-animation="fadeInLeftShorterPlus" data-appear-animation-delay="450">
-										<p class="mt-2 pt-1 mb-0 text-1 p-relative top-5 text-uppercase">Step 3</p>
-										<h4 class="mb-0 text-color-secondary">Enjoy and Learn</h4>
-									</div>
-								</div>
-
+							<div class="col-lg-3 text-center text-md-start text-lg-end">
+								<a href="demo-dentist-contact.html#book" class="btn btn-secondary border-0 text-3-5 font-weight-semi-bold btn-px-5 btn-py-3">Book Appointment</a>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<section class="section custom-bg-color-grey-1 border-0 m-0" id="courses">
-					<div class="container position-relative my-4">
+				<div class="container my-5">
+					<div class="row">
+						<div class="col py-4">
 
-						<div class="custom-element custom-element-pos-1 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="200">
-							<div class="opacity-2" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.8, 'transition': true, 'transitionDuration': 3000}">
-								<img class="icon-animated" width="157" height="157" src="{{ asset('assets/img/demos/education/elements/element-1.svg') }}" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary'}" />
+							<div class="featured-boxes featured-boxes-style-9">
+								<div class="row">
+									<div class="col-lg-4 px-lg-3">
+										<div class="featured-box featured-box-primary">
+											<div class="box-content">
+												<span class="icon-featured icon-featured-lg">
+													<img height="100" src="{{ asset('assets/img/demos/dentist/icons/icon-1.svg') }}" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-tertiary mt-1'}" />
+												</span>
+												<h4 class="font-weight-semi-bold mt-3 pt-2 mb-3 text-5-5 text-color-dark">Convenient Location</h4>
+												<p class="mb-0 text-3-5 font-weight-medium">Lorem ipsum dolor sit amet, consec tetur adipiscing el nc viverra erat orcias ac auctor.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-4 px-lg-3">
+										<div class="featured-box featured-box-secondary">
+											<div class="box-content">
+												<span class="icon-featured icon-featured-lg">
+													<img height="100" src="{{ asset('assets/img/demos/dentist/icons/icon-2.svg') }}" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-tertiary mt-1'}" />
+												</span>
+												<h4 class="font-weight-semi-bold mt-3 pt-2 mb-3 text-5-5 text-color-dark">Full-Service</h4>
+												<p class="mb-0 text-3-5 font-weight-medium">Lorem ipsum dolor sit amet, con sectetur adipiscing el nc viverra eratorci ac auctor.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-4 px-lg-3">
+										<div class="featured-box featured-box-tertiary">
+											<div class="box-content">
+												<span class="icon-featured icon-featured-lg">
+													<img height="100" src="{{ asset('assets/img/demos/dentist/icons/icon-3.svg') }}" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-tertiary mt-1'}" />
+												</span>
+												<h4 class="font-weight-semi-bold mt-3 pt-2 mb-3 text-5-5 text-color-dark">Top Rated Dentists</h4>
+												<p class="mb-0 text-3-5 font-weight-medium">Lorem ipsum dolor sit amet, consec tetur adipiscing el nc viverra eratorciac auctor.</p>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
-						</div>
 
-						<div class="row mb-4">
-							<div class="col text-center">
-								<div class="overflow-hidden">
-									<h2 class="text-color-secondary font-weight-semi-bold text-6 line-height-1 mb-3-5 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="300">Popular Courses</h2>
+						</div>
+					</div>
+				</div>
+
+				<section class="section border-0 bg-color-light m-0 py-5">
+					<div class="container py-5 my-2">
+						<div class="row align-items-xl-center">
+							<div class="col-lg-6 mb-5 mb-lg-0 text-center">
+
+								<svg height="0" width="0">
+									<defs>
+										<clipPath id="svgPath">
+											<path d="M143.3,391.5C64.74,320.29-11.54,212.43,1.46,109.91,6.81,67.72,35,23.31,77.51,11.57c45.8-12.65,81.56,9.87,127.88,10,51,.11,99.23-34,152.49-16.65C458.61,37.71,412.21,170.19,372,228c-10.63,15.3-44.76,63.1-48.29,40.44-9.23-59.24-26.68-67.61-57.52-75.23-32.68-8.07-80.24,8.61-92.4,39.25-26.47,66.76,31,137.89,64.57,191.19.89,1.42,38.8,48.72,31,50.86-21.12,5.77-69.06-37.36-84.67-48.95C171.14,415.52,157.18,404.08,143.3,391.5Z" style="fill:#000"/>
+										</clipPath>
+									</defs>
+								</svg>	
+
+								<img class="img-fluid" style="clip-path: url(#svgPath); min-height: 480px; max-width: 420px;" src="{{ asset('assets/img/demos/dentist/generic/generic-5.jpg') }}" alt="">
+
+							</div>
+							<div class="col-lg-6 ps-lg-4 ps-xl-5">
+								<h2 class="d-inline-block line-height-5 text-4 positive-ls-3 font-weight-semibold text-color-primary mb-2 appear-animation" data-appear-animation="fadeInUpShorter">ABOUT US</h2>
+								<h3 class="text-color-dark text-9 line-height-3 text-transform-none font-weight-semibold mb-4 mb-lg-3 mb-xl-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="250">Welcome To Porto Dentist Downtown Los Angeles</h3>
+								<p class="text-3-5 font-weight-medium pb-1 mb-4 mb-lg-2 mb-xl-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="500">Cras a elit sit amet leo accumsan volutpat. Suspendisse hendreriast ehicula leo, vel efficitur felis ultrices non. Cras a elit sit amet leo acun volutpat. Suspendisse hendrerit vehicula leo, vel efficitur fel. </p>
+								<div class="row align-items-center pb-2 mb-4 mb-lg-1 mb-xl-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="750">
+									<div class="col-5">
+										<div class="d-flex">
+											<span class="text-4 font-weight-bold text-color-dark pt-2 ms-2">
+												<strong class="d-block font-weight-bold text-10 mb-2">10000+</strong>
+												Satisfied Patients
+											</span>
+										</div>
+									</div>
+									<div class="col-7">
+										<p class="mb-0">Cras a elit sit amet leo accumsan volutpat. Suspendisse. </p>
+									</div>
+								</div>
+								<div class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1000">
+									<a href="#" class="btn btn-secondary border-0 text-3 font-weight-semi-bold btn-px-5 btn-py-3">Explore Services</a>
 								</div>
 							</div>
 						</div>
+					</div>
+				</section>
+
+				<section class="section border-0 bg-transparent m-0 py-5">
+					<div class="container-fluid">
+						<div class="row px-4">
+
+							<div class="owl-carousel owl-theme full-width nav-style-1 nav-arrows-thin nav-font-size-lg custom-nav-1 custom-nav-1-pos-2 p-relative mb-0" data-plugin-options="{'responsive': {'0': {'items': 1}, '479': {'items': 1}, '768': {'items': 2}, '979': {'items': 2}, '1199': {'items': 4}}, 'loop': true, 'nav': true, 'dots': false, 'margin': 40}">
+								<div>
+									<span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-slow-image-zoom-hover thumb-info-swap-content anim-hover-inner-wrapper">
+										<span class="thumb-info-wrapper overlay overlay-op-3 overlay-show overflow-hidden">
+											<img src="img/demos/dentist/services/service-1.jpg" class="img-fluid" alt="">
+											<span class="thumb-info-title bg-transparent w-100 mw-100 p-0 top-0 p-5">
+												<span class="anim-hover-inner-translate-bottom-20px transition-2ms d-inline-block">
+													<span class="thumb-info-inner">
+														<h4 class="text-color-light text-5 font-weight-bold">Dental Exams</h4>
+													</span>
+												</span>
+											</span>
+											<span class="thumb-info-title bottom-30 bg-transparent w-100 mw-100 p-0">
+												<span class="thumb-info-swap-content-wrapper">
+													<span class="thumb-info-inner text-start ps-5">
+														<img style="max-width: 60px;" height="60" width="60" class="transform-none mb-3" src="{{ asset('assets/img/demos/dentist/icons/icon-4.svg') }}" />
+													</span>
+													<span class="thumb-info-inner text-2">
+														<p class="px-5 text-4 text-lg-2 opacity-7 font-weight-medium text-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere elit in massa congue congue. Ut ornare fermentum sem, vitae port.</p>
+														<a href="demo-dentist-services-details.html" class="btn btn-primary btn-arrow-effect-1 py-2 px-3 ms-5 mb-3 text-3 text-lg-1 ls-0 border-0">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+													</span>
+												</span>
+											</span>
+										</span>
+									</span>
+								</div>
+								<div>
+									<span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-slow-image-zoom-hover thumb-info-swap-content anim-hover-inner-wrapper">
+										<span class="thumb-info-wrapper overlay overlay-op-3 overlay-show overflow-hidden">
+											<img src="{{ asset('assets/img/demos/dentist/services/service-2.jpg') }}" class="img-fluid" alt="">
+											<span class="thumb-info-title bg-transparent w-100 mw-100 p-0 top-0 p-5">
+												<span class="anim-hover-inner-translate-bottom-20px transition-2ms d-inline-block">
+													<span class="thumb-info-inner">
+														<h4 class="text-color-light text-5 font-weight-bold">Dental Cleaning</h4>
+													</span>
+												</span>
+											</span>
+											<span class="thumb-info-title bottom-30 bg-transparent w-100 mw-100 p-0">
+												<span class="thumb-info-swap-content-wrapper">
+													<span class="thumb-info-inner text-start ps-5">
+														<img style="max-width: 60px;" height="60" width="60" class="transform-none mb-3" src="{{ asset('assets/img/demos/dentist/icons/icon-5.svg') }}" />
+													</span>
+													<span class="thumb-info-inner text-2">
+														<p class="px-5 text-4 text-lg-2 opacity-7 font-weight-medium text-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere elit in massa congue congue. Ut ornare fermentum sem, vitae port.</p>
+														<a href="demo-dentist-services-details.html" class="btn btn-primary btn-arrow-effect-1 py-2 px-3 ms-5 mb-3 text-3 text-lg-1 ls-0 border-0">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+													</span>
+												</span>
+											</span>
+										</span>
+									</span>
+								</div>
+								<div>
+									<span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-slow-image-zoom-hover thumb-info-swap-content anim-hover-inner-wrapper">
+										<span class="thumb-info-wrapper overlay overlay-op-3 overlay-show overflow-hidden">
+											<img src="{{ asset('assets/img/demos/dentist/services/service-3.jpg') }}" class="img-fluid" alt="">
+											<span class="thumb-info-title bg-transparent w-100 mw-100 p-0 top-0 p-5">
+												<span class="anim-hover-inner-translate-bottom-20px transition-2ms d-inline-block">
+													<span class="thumb-info-inner">
+														<h4 class="text-color-light text-5 font-weight-bold">Root Canal</h4>
+													</span>
+												</span>
+											</span>
+											<span class="thumb-info-title bottom-30 bg-transparent w-100 mw-100 p-0">
+												<span class="thumb-info-swap-content-wrapper">
+													<span class="thumb-info-inner text-start ps-5">
+														<img style="max-width: 60px;" height="60" width="60" class="transform-none mb-3" src="{{ asset('assets/img/demos/dentist/icons/icon-6.svg') }}" />
+													</span>
+													<span class="thumb-info-inner text-2">
+														<p class="px-5 text-4 text-lg-2 opacity-7 font-weight-medium text-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere elit in massa congue congue. Ut ornare fermentum sem, vitae port.</p>
+														<a href="demo-dentist-services-details.html" class="btn btn-primary btn-arrow-effect-1 py-2 px-3 ms-5 mb-3 text-3 text-lg-1 ls-0 border-0">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+													</span>
+												</span>
+											</span>
+										</span>
+									</span>
+								</div>
+								<div>
+									<span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-slow-image-zoom-hover thumb-info-swap-content anim-hover-inner-wrapper">
+										<span class="thumb-info-wrapper overlay overlay-op-3 overlay-show overflow-hidden">
+											<img src="{{ asset('assets/img/demos/dentist/services/service-4.jpg') }}" class="img-fluid" alt="">
+											<span class="thumb-info-title bg-transparent w-100 mw-100 p-0 top-0 p-5">
+												<span class="anim-hover-inner-translate-bottom-20px transition-2ms d-inline-block">
+													<span class="thumb-info-inner">
+														<h4 class="text-color-light text-5 font-weight-bold">Oral Surgery</h4>
+													</span>
+												</span>
+											</span>
+											<span class="thumb-info-title bottom-30 bg-transparent w-100 mw-100 p-0">
+												<span class="thumb-info-swap-content-wrapper">
+													<span class="thumb-info-inner text-start ps-5">
+														<img style="max-width: 60px;" height="60" width="60" class="transform-none mb-3" src="{{ asset('assets/img/demos/dentist/icons/icon-7.svg') }}" />
+													</span>
+													<span class="thumb-info-inner text-2">
+														<p class="px-5 text-4 text-lg-2 opacity-7 font-weight-medium text-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere elit in massa congue congue. Ut ornare fermentum sem, vitae port.</p>
+														<a href="demo-dentist-services-details.html" class="btn btn-primary btn-arrow-effect-1 py-2 px-3 ms-5 mb-3 text-3 text-lg-1 ls-0 border-0">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+													</span>
+												</span>
+											</span>
+										</span>
+									</span>
+								</div>
+								<div>
+									<span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-slow-image-zoom-hover thumb-info-swap-content anim-hover-inner-wrapper">
+										<span class="thumb-info-wrapper overlay overlay-op-3 overlay-show overflow-hidden">
+											<img src="{{ asset('assets/img/demos/dentist/services/service-2.jpg') }}" class="img-fluid" alt="">
+											<span class="thumb-info-title bg-transparent w-100 mw-100 p-0 top-0 p-5">
+												<span class="anim-hover-inner-translate-bottom-20px transition-2ms d-inline-block">
+													<span class="thumb-info-inner">
+														<h4 class="text-color-light text-5 font-weight-bold">Dental Cleaning</h4>
+													</span>
+												</span>
+											</span>
+											<span class="thumb-info-title bottom-30 bg-transparent w-100 mw-100 p-0">
+												<span class="thumb-info-swap-content-wrapper">
+													<span class="thumb-info-inner text-start ps-5">
+														<img style="max-width: 60px;" height="60" width="60" class="transform-none mb-3" src="{{ asset('assets/img/demos/dentist/icons/icon-5.svg') }}" />
+													</span>
+													<span class="thumb-info-inner text-2">
+														<p class="px-5 text-4 text-lg-2 opacity-7 font-weight-medium text-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere elit in massa congue congue. Ut ornare fermentum sem, vitae port.</p>
+														<a href="demo-dentist-services-details.html" class="btn btn-primary btn-arrow-effect-1 py-2 px-3 ms-5 mb-3 text-3 text-lg-1 ls-0 border-0">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+													</span>
+												</span>
+											</span>
+										</span>
+									</span>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</section>
+
+				<section class="section border-0 bg-color-light m-0 py-5">
+					<div class="container py-5 my-2">
 						<div class="row">
-							<div class="col appear-animation" data-appear-animation="fadeInLeftShorterPlus" data-appear-animation-delay="500">
-								<div class="owl-carousel owl-theme nav-style-1 nav-outside nav-font-size-lg custom-nav-secondary mb-0" data-plugin-options="{'responsive': {'576': {'items': 1}, '768': {'items': 2}, '992': {'items': 2}, '1200': {'items': 3}}, 'loop': true, 'nav': true, 'dots': false, 'margin': 20}">
-									<div>
-										<div class="card custom-card-courses border-radius-0">
-											<div class="p-relative">
-												<a href="demo-education-courses-details.html" class="text-color-secondary" title="">
-													<img class="card-img-top border-radius-0" src="{{ asset('assets/img/demos/education/courses/course-1.jpg') }}" alt="" />
-												</a>
-												<div class="custom-card-courses-author">
-													<div class="img-thumbnail img-thumbnail-no-borders">
-														<img src="{{ asset('assets/img/avatars/avatar.jpg') }}" class="rounded-circle" alt="">
-													</div>
-												</div>
-											</div>
-											<div class="card-body">
-												<p class="mb-0 text-1 p-relative top-5 text-uppercase">John Doe</p>
-												<h4 class="mb-3 text-color-secondary"><a href="demo-education-courses-details.html" class="text-color-secondary" title="">Course Name Example</a></h4>
+							<div class="col-lg-6 mb-5 mb-lg-0">
+								<h2 class="d-inline-block line-height-5 text-4 positive-ls-3 font-weight-semibold text-color-primary mb-2 appear-animation" data-appear-animation="fadeInUpShorter">SPECIAL SERVICES</h2>
+								<h3 class="text-color-dark text-9 line-height-3 text-transform-none font-weight-semibold mb-4 mb-lg-3 mb-xl-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="250">Premium Dental Care services for everyone.</h3>
+								<p class="text-3-5 font-weight-medium pb-1 mb-4 mb-lg-2 mb-xl-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="500">Cras a elit sit amet leo accumsan volutpat. Suspendisse hendreriast ehicula leo, vel efficitur felis ultrices non. Cras a elit sit amet leo acun volutpat. Suspendisse hendrerit vehicula leo, vel efficitur fel. </p>
 
-												<div class="float-end">
-													<strong class="text-primary text-5">$79</strong>
-												</div>
+							</div>
 
-												<div class="text-2">
-													<span class="d-inline-block pe-2"><i class="far text-primary fa-user"></i> 123 </span>
-													<span class="d-inline-block pe-2"><i class="far text-primary fa-comments"></i> 123</span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div>
-										<div class="card custom-card-courses border-radius-0">
-											<div class="p-relative">
-												<a href="demo-education-courses-details.html" class="text-color-secondary" title="">
-													<img class="card-img-top border-radius-0" src="{{ asset('assets/img/demos/education/courses/course-2.jpg') }}" alt="" />
-												</a>
-												<div class="custom-card-courses-author">
-													<div class="img-thumbnail img-thumbnail-no-borders">
-														<img src="{{ asset('assets/img/avatars/avatar-2.jpg') }}" class="rounded-circle" alt="">
-													</div>
-												</div>
-											</div>
-											<div class="card-body">
-												<p class="mb-0 text-1 p-relative top-5 text-uppercase">John Doe</p>
-												<h4 class="mb-3 text-color-secondary"><a href="demo-education-courses-details.html" class="text-color-secondary" title="">Course Name Example</a></h4>
-
-												<div class="float-end">
-													<strong class="text-primary text-5">$59</strong>
-												</div>
-
-												<div class="text-2">
-													<span class="d-inline-block pe-2"><i class="far text-primary fa-user"></i> 123 </span>
-													<span class="d-inline-block pe-2"><i class="far text-primary fa-comments"></i> 123</span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div>
-										<div class="card custom-card-courses border-radius-0">
-											<div class="p-relative">
-												<a href="demo-education-courses-details.html" class="text-color-secondary" title="">
-													<img class="card-img-top border-radius-0" src="{{ asset('assets/img/demos/education/courses/course-3.jpg') }}" alt="" />
-												</a>
-												<div class="custom-card-courses-author">
-													<div class="img-thumbnail img-thumbnail-no-borders">
-														<img src="{{ asset('assets/img/avatars/avatar-3.jpg') }}" class="rounded-circle" alt="">
-													</div>
-												</div>
-											</div>
-											<div class="card-body">
-												<p class="mb-0 text-1 p-relative top-5 text-uppercase">John Doe</p>
-												<h4 class="mb-3 text-color-secondary"><a href="demo-education-courses-details.html" class="text-color-secondary" title="">Course Name Example</a></h4>
-
-												<div class="float-end">
-													<strong class="text-primary text-5">$29</strong>
-												</div>
-
-												<div class="text-2">
-													<span class="d-inline-block pe-2"><i class="far text-primary fa-user"></i> 123 </span>
-													<span class="d-inline-block pe-2"><i class="far text-primary fa-comments"></i> 123</span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div>
-										<div class="card custom-card-courses border-radius-0">
-											<div class="p-relative">
-												<a href="demo-education-courses-details.html" class="text-color-secondary" title="">
-													<img class="card-img-top border-radius-0" src="{{ asset('assets/img/demos/education/courses/course-4.jpg') }}" alt="" />
-												</a>
-												<div class="custom-card-courses-author">
-													<div class="img-thumbnail img-thumbnail-no-borders">
-														<img src="{{ asset('assets/img/avatars/avatar-4.jpg') }}" class="rounded-circle" alt="">
-													</div>
-												</div>
-											</div>
-											<div class="card-body">
-												<p class="mb-0 text-1 p-relative top-5 text-uppercase">John Doe</p>
-												<h4 class="mb-3 text-color-secondary"><a href="demo-education-courses-details.html" class="text-color-secondary" title="">Course Name Example</a></h4>
-
-												<div class="float-end">
-													<strong class="text-primary text-5">$29</strong>
-												</div>
-
-												<div class="text-2">
-													<span class="d-inline-block pe-2"><i class="far text-primary fa-user"></i> 123 </span>
-													<span class="d-inline-block pe-2"><i class="far text-primary fa-comments"></i> 123</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+							<div class="col-lg-6 mb-5">
+								<ul class="list list-icons list-icons-lg ms-lg-3 mt-lg-4 pt-lg-2">
+									<li class="text-3-5 font-weight-medium appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200"><i class="fas fa-check text-color-tertiary"></i> <span class="ps-2 d-block">Cras a elit sit amet leo accumsan volutpat. Suspendisse hendreriast ehicula leo.</span></li>
+									<li class="text-3-5 font-weight-medium appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400"><i class="fas fa-check text-color-tertiary"></i> <span class="ps-2 d-block">Elit sit amet leo accumsan volutpat. Suspendisse hendreriast ehicula leo.</span></li>
+									<li class="text-3-5 font-weight-medium appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600"><i class="fas fa-check text-color-tertiary"></i> <span class="ps-2 d-block">Ras a elit sit amet leo accumsan volutpat. Suspendisse hendreriast ehicula leo.</span></li>
+								</ul>
 							</div>
 						</div>
-						<div class="row pt-2">
-							<div class="col text-center">
-								<a href="demo-education-courses.html" class="btn btn-secondary font-weight-bold btn-px-5 btn-py-3 mt-4 mb-2 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="350">VIEW ALL</a>
+
+						<div class="row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
+							<div class="col">
+								<hr>
 							</div>
 						</div>
-					</div>
-				</section>
-				<section class="section section-background custom-section-background-1 bg-color-tertiary border-0 m-0" style="background-image: url({{ asset('assets/img/demos/education/backgrounds/background-1.jpg') }}); background-position: 100% 100%; background-repeat: no-repeat; background-size: contain;">
-					<div class="container my-4">
-						<div class="row mb-4">
-							<div class="col-lg-6">
-								<div class="card border-radius-0 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="350">
-									<div class="card-body py-5 my-2">
 
-										<div class="row">
-											<div class="col px-4">
-												<div class="text-center">
-													<h2 class="text-color-secondary font-weight-semi-bold text-8 line-height-1 mb-2">Register Now</h2>
-													<p class="text-4">Get <strong>50% OFF</strong> For All Courses</p>
-												</div>
-												<div class="countdown text-color-primary font-weight-semibold custom-countdown-style-1 justify-content-center mb-4 py-2 px-2" data-plugin-countdown data-plugin-options="{'textDay': 'DAYS', 'textHour': 'HRS', 'textMin': 'MIN', 'textSec': 'SEC', 'date': '2024/01/01 12:00:00', 'wrapperClass': 'text-color-primary', 'numberClass': 'font-weight-semibold text-color-primary'}"></div>
-
-													<form class="custom-form-style-1 contact-form" action="php/contact-form.php" method="POST">
-
-													<div class="contact-form-success alert alert-success d-none mt-4">
-														<strong>Success!</strong> Your register has been sent to us.
-													</div>
-
-													<div class="contact-form-error alert alert-danger d-none mt-4">
-														<strong>Error!</strong> There was an error sending your register.
-														<span class="mail-error-message text-1 d-block"></span>
-													</div>
-
-													<div class="row g-2">
-														<div class="form-group col-md-6 mb-2">
-															<input type="text" value="" data-msg-required="Please enter your first name." maxlength="100" class="form-control p-3 bg-color-tertiary" name="firstName" id="firstName" placeholder="FIRST NAME*" required>
-														</div>
-														<div class="form-group col-md-6 mb-2">
-															<input type="text" value="" data-msg-required="Please enter your last name." maxlength="100" class="form-control p-3 bg-color-tertiary custom-border-start-1" name="lastName" id="lastName" placeholder="LAST NAME*" required>
-														</div>
-													</div>
-													<div class="row g-2">
-														<div class="form-group col-md-6 mb-2">
-															<input type="text" value="" data-msg-required="Please enter your phone number." maxlength="100" class="form-control p-3 bg-color-tertiary" name="phone" id="phone" placeholder="PHONE*" required>
-														</div>
-														<div class="form-group col-md-6 mb-2">
-															<input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control p-3 bg-color-tertiary custom-border-start-1" name="email" id="email" placeholder="EMAIL*" required>
-														</div>
-													</div>
-													<div class="row g-2">
-														<div class="form-group col mb-0">
-															<input type="submit" value="GET IT NOW" class="btn btn-secondary font-weight-bold d-block btn-px-5 btn-py-3 w-100" data-loading-text="Loading...">
-														</div>
-													</div>
-												</form>
-											</div>
-										</div>
-
-									</div>
-								</div>
+						<div class="row align-items-center text-center text-md-start pt-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
+							<div class="col-lg-9 mb-3 mb-lg-0">
+								<p class="text-color-primary text-4-5 font-weight-medium line-height-4 mb-0">
+									<strong>Book Appointment Online</strong> - Need Immediate Confirmation? Call Us at <u>888-123-4567</u>
+								</p>
+							</div>
+							<div class="col-lg-3 text-center text-md-start text-lg-end">
+								<a href="demo-dentist-contact.html#book" class="btn btn-secondary border-0 text-3-5 font-weight-semi-bold btn-px-5 btn-py-3">Book Appointment</a>
 							</div>
 						</div>
 					</div>
 				</section>
 
-				<section class="section custom-bg-color-grey-1 border-0 m-0">
-					<div class="container position-relative my-4">
-
-						<div class="custom-element custom-element-pos-2 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="200">
-							<div class="opacity-2" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.8, 'transition': true, 'transitionDuration': 3000}">
-								<img class="icon-animated" width="157" height="157" src="{{ asset('assets/img/demos/education/elements/element-1.svg') }}" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary'}" />
-							</div>
-						</div>
-
-						<div class="row mb-4">
-							<div class="col text-center">
-								<div class="overflow-hidden">
-									<h2 class="text-color-secondary font-weight-semi-bold text-6 line-height-1 mb-3-5 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="300">What Students Say</h2>
-								</div>
-							</div>
-						</div>
+				<section class="section border-0 bg-color-transparent m-0 py-5">
+					<div class="container py-5 my-2">
 						<div class="row">
-							<div class="appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="350">
-								<div class="owl-carousel owl-theme nav-style-1 nav-outside nav-font-size-lg custom-nav-secondary mb-0" data-plugin-options="{'responsive': {'576': {'items': 1}, '768': {'items': 1}, '992': {'items': 1}, '1200': {'items': 1}}, 'loop': true, 'nav': true, 'dots': false, 'margin': 20}">
-									<div class="px-lg-5 mx-lg-5">
-										<div class="testimonial testimonial-style-2 testimonial-with-quotes testimonial-quotes-primary mb-0">
-											<div class="testimonial-author">
-												<img src="{{ asset('assets/img/clients/client-1.jpg') }}" class="img-fluid rounded-circle" alt="">
-											</div>
-											<blockquote>
-												<p class="mb-0 custom-font-1 fst-italic text-4 line-height-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce ante tellus, convallis non consectetur sed, pharetra nec ex.</p>
-											</blockquote>
-											<div class="testimonial-author">
-												<p><strong class="font-weight-bold">John Smith</strong></p>
-											</div>
-										</div>
-									</div>
-									<div class="px-lg-5 mx-lg-5">
-										<div class="testimonial testimonial-style-2 testimonial-with-quotes testimonial-quotes-primary mb-0">
-											<div class="testimonial-author">
-												<img src="{{ asset('assets/img/clients/client-2.jpg') }}" class="img-fluid rounded-circle" alt="">
-											</div>
-											<blockquote>
-												<p class="mb-0 custom-font-1 fst-italic text-4 line-height-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce ante tellus, convallis non consectetur sed, pharetra nec ex.</p>
-											</blockquote>
-											<div class="testimonial-author">
-												<p><strong class="font-weight-bold">John Smith</strong></p>
-											</div>
-										</div>
-									</div>
-									<div class="px-lg-5 mx-lg-5">
-										<div class="testimonial testimonial-style-2 testimonial-with-quotes testimonial-quotes-primary mb-0">
-											<div class="testimonial-author">
-												<img src="{{ asset('assets/img/clients/client-3.jpg') }}" class="img-fluid rounded-circle" alt="">
-											</div>
-											<blockquote>
-												<p class="mb-0 custom-font-1 fst-italic text-4 line-height-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce ante tellus, convallis non consectetur sed, pharetra nec ex.</p>
-											</blockquote>
-											<div class="testimonial-author">
-												<p><strong class="font-weight-bold">John Smith</strong></p>
-											</div>
-										</div>
-									</div>
-									<div class="px-lg-5 mx-lg-5">
-										<div class="testimonial testimonial-style-2 testimonial-with-quotes testimonial-quotes-primary mb-0">
-											<div class="testimonial-author">
-												<img src="{{ asset('assets/img/clients/client-4.jpg') }}" class="img-fluid rounded-circle" alt="">
-											</div>
-											<blockquote>
-												<p class="mb-0 custom-font-1 fst-italic text-4 line-height-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce ante tellus, convallis non consectetur sed, pharetra nec ex.</p>
-											</blockquote>
-											<div class="testimonial-author">
-												<p><strong class="font-weight-bold">John Smith</strong></p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section class="section bg-color-tertiary border-0 m-0">
-					<div class="container my-4">
-						<div class="row mb-4">
 							<div class="col text-center">
-								<div class="overflow-hidden">
-									<h2 class="text-color-secondary font-weight-semi-bold text-6 line-height-1 mb-3-5 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="300">Latest News</h2>
+								<h2 class="d-inline-block line-height-5 text-4 positive-ls-3 font-weight-semibold text-color-primary mb-2 appear-animation" data-appear-animation="fadeInUpShorter">PORTO DENTISTS</h2>
+								<h3 class="text-color-dark text-9 line-height-3 text-transform-none font-weight-semibold mb-4 mb-lg-3 mb-xl-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="250">Meet Our Dentists</h3>
+								<p class="text-3-5 font-weight-medium pb-1 mb-4 mb-lg-2 mb-xl-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="500">Cras a elit sit amet leo accumsan volutpat. Suspendisse hendreriast ehicula leo, vel efficitur felis ultrices non. Cras a elit sit amet leo acun volutpat. Suspendisse hendrerit vehicula leo, vel efficitur fel. </p>
+
+								<div class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
+									<div class="owl-carousel owl-theme nav-style-1 nav-arrows-thin nav-font-size-lg custom-nav-1 custom-nav-1-pos-3 p-relative mb-0 mt-2" data-plugin-options="{'responsive': {'0': {'items': 1}, '479': {'items': 1}, '768': {'items': 2}, '979': {'items': 2}, '1199': {'items': 3}}, 'loop': true, 'nav': true, 'dots': false, 'margin': 40}">
+										<div>
+											<div class="card border-0">
+												<span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-slow-image-zoom-hover thumb-info-swap-content anim-hover-inner-wrapper">
+													<span class="thumb-info-wrapper overlay overflow-hidden">
+														<img src="{{ asset('assets/img/demos/dentist/team/team-1.jpg') }}" class="img-fluid" alt="">
+														<span class="thumb-info-title bottom-30 bg-transparent w-100 mw-100 p-0">
+															<span class="thumb-info-swap-content-wrapper">
+																<span class="thumb-info-inner text-start ps-5"></span>
+																<span class="thumb-info-inner text-2">
+																	<p class="px-5 text-4 text-lg-2 opacity-7 font-weight-medium text-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere elit in massa congue congue. Ut ornare fermentum sem, vitae port.</p>
+
+																	<ul class="social-icons social-icons-clean social-icons-icon-light">
+																		<li class="social-icons-instagram">
+																			<a href="http://www.instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+																		</li>
+																		<li class="social-icons-twitter">
+																			<a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+																		</li>
+																		<li class="social-icons-facebook">
+																			<a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+																		</li>
+																	</ul>
+
+																</span>
+															</span>
+														</span>
+													</span>
+												</span>
+												<h3 class="font-weight-bold text-capitalize line-height-1 text-5-5 mt-4 mb-0">John Doe</h3>
+												<p class="font-weight-medium text-color-grey text-3 mb-2">Dentist, Owner</p>
+											</div>
+										</div>
+										<div>
+											<div class="card border-0">
+												<span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-slow-image-zoom-hover thumb-info-swap-content anim-hover-inner-wrapper">
+													<span class="thumb-info-wrapper overlay overflow-hidden">
+														<img src="{{ asset('assets/img/demos/dentist/team/team-2.jpg') }}" class="img-fluid" alt="">
+														<span class="thumb-info-title bottom-30 bg-transparent w-100 mw-100 p-0">
+															<span class="thumb-info-swap-content-wrapper">
+																<span class="thumb-info-inner text-start ps-5"></span>
+																<span class="thumb-info-inner text-2">
+																	<p class="px-5 text-4 text-lg-2 opacity-7 font-weight-medium text-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere elit in massa congue congue. Ut ornare fermentum sem, vitae port.</p>
+
+																	<ul class="social-icons social-icons-clean social-icons-icon-light">
+																		<li class="social-icons-instagram">
+																			<a href="http://www.instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+																		</li>
+																		<li class="social-icons-twitter">
+																			<a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+																		</li>
+																		<li class="social-icons-facebook">
+																			<a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+																		</li>
+																	</ul>
+
+																</span>
+															</span>
+														</span>
+													</span>
+												</span>
+												<h3 class="font-weight-bold text-capitalize line-height-1 text-5-5 mt-4 mb-0">Janice Doe</h3>
+												<p class="font-weight-medium text-color-grey text-3 mb-2">Associate Dentist</p>
+											</div>
+										</div>
+										<div>
+											<div class="card border-0">
+												<span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-slow-image-zoom-hover thumb-info-swap-content anim-hover-inner-wrapper">
+													<span class="thumb-info-wrapper overlay overflow-hidden">
+														<img src="{{ asset('assets/img/demos/dentist/team/team-3.jpg') }}" class="img-fluid" alt="">
+														<span class="thumb-info-title bottom-30 bg-transparent w-100 mw-100 p-0">
+															<span class="thumb-info-swap-content-wrapper">
+																<span class="thumb-info-inner text-start ps-5"></span>
+																<span class="thumb-info-inner text-2">
+																	<p class="px-5 text-4 text-lg-2 opacity-7 font-weight-medium text-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere elit in massa congue congue. Ut ornare fermentum sem, vitae port.</p>
+
+																	<ul class="social-icons social-icons-clean social-icons-icon-light">
+																		<li class="social-icons-instagram">
+																			<a href="http://www.instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+																		</li>
+																		<li class="social-icons-twitter">
+																			<a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+																		</li>
+																		<li class="social-icons-facebook">
+																			<a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+																		</li>
+																	</ul>
+
+																</span>
+															</span>
+														</span>
+													</span>
+												</span>
+												<h3 class="font-weight-bold text-capitalize line-height-1 text-5-5 mt-4 mb-0">Peter Phillips</h3>
+												<p class="font-weight-medium text-color-grey text-3 mb-2">Dental Hygienist</p>
+											</div>
+										</div>
+										<div>
+											<div class="card border-0">
+												<span class="thumb-info thumb-info-no-borders thumb-info-no-borders-rounded thumb-info-slow-image-zoom-hover thumb-info-swap-content anim-hover-inner-wrapper">
+													<span class="thumb-info-wrapper overlay overflow-hidden">
+														<img src="{{ asset('assets/img/demos/dentist/team/team-2.jpg') }}" class="img-fluid" alt="">
+														<span class="thumb-info-title bottom-30 bg-transparent w-100 mw-100 p-0">
+															<span class="thumb-info-swap-content-wrapper">
+																<span class="thumb-info-inner text-start ps-5"></span>
+																<span class="thumb-info-inner text-2">
+																	<p class="px-5 text-4 text-lg-2 opacity-7 font-weight-medium text-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere elit in massa congue congue. Ut ornare fermentum sem, vitae port.</p>
+
+																	<ul class="social-icons social-icons-clean social-icons-icon-light">
+																		<li class="social-icons-instagram">
+																			<a href="http://www.instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+																		</li>
+																		<li class="social-icons-twitter">
+																			<a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+																		</li>
+																		<li class="social-icons-facebook">
+																			<a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+																		</li>
+																	</ul>
+
+																</span>
+															</span>
+														</span>
+													</span>
+												</span>
+												<h3 class="font-weight-bold text-capitalize line-height-1 text-5-5 mt-4 mb-0">Janice Doe</h3>
+												<p class="font-weight-medium text-color-grey text-3 mb-2">Associate Dentist</p>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="row pb-3">
-							<div class="col-lg-4 mb-4 mb-lg-0">
-								<article class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
-									<div class="card border-0 border-radius-0 box-shadow-1">
-										<div class="card-body p-3 z-index-1">
-											<a href="demo-education-blog-post.html">
-												<img class="card-img-top border-radius-0 mb-2" src="{{ asset('assets/img/demos/education/blog/blog-1.jpg') }}" alt="Card Image">
-											</a>
-											<p class="text-uppercase text-color-default text-1 my-2">
-												<time pubdate datetime="2023-01-10">10 Jan 2023</time> 
-												<span class="opacity-3 d-inline-block px-2">|</span> 
-												3 Comments 
-												<span class="opacity-3 d-inline-block px-2">|</span> 
-												John Doe
-											</p>
-											<div class="card-body p-0">
-												<h4 class="card-title text-5 font-weight-semi-bold pb-1 mb-2"><a class="text-color-secondary text-decoration-none" href="demo-education-blog-post.html">Lorem ipsum dolor sit amet</a></h4>
-												<p class="card-text mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra lorem , consectetur adipiscing elit...</p>
-												<a href="demo-education-blog-post.html" class="btn btn-link font-weight-semibold text-decoration-none text-2 ps-0">READ MORE</a>
-											</div>
-										</div>
-									</div>
-								</article>
-							</div>
-							<div class="col-lg-4 mb-4 mb-lg-0">
-								<article class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
-									<div class="card border-0 border-radius-0 box-shadow-1">
-										<div class="card-body p-3 z-index-1">
-											<a href="demo-education-blog-post.html">
-												<img class="card-img-top border-radius-0 mb-2" src="{{ asset('assets/img/demos/education/blog/blog-2.jpg') }}" alt="Card Image">
-											</a>
-											<p class="text-uppercase text-color-default text-1 my-2">
-												<time pubdate datetime="2023-01-10">10 Jan 2023</time> 
-												<span class="opacity-3 d-inline-block px-2">|</span> 
-												3 Comments 
-												<span class="opacity-3 d-inline-block px-2">|</span> 
-												John Doe
-											</p>
-											<div class="card-body p-0">
-												<h4 class="card-title text-5 font-weight-semi-bold pb-1 mb-2"><a class="text-color-secondary text-decoration-none" href="demo-education-blog-post.html">Lorem ipsum dolor sit amet</a></h4>
-												<p class="card-text mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra lorem , consectetur adipiscing elit...</p>
-												<a href="demo-education-blog-post.html" class="btn btn-link font-weight-semibold text-decoration-none text-2 ps-0">READ MORE</a>
-											</div>
-										</div>
-									</div>
-								</article>
-							</div>
-							<div class="col-lg-4 mb-4 mb-lg-0">
-								<article class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
-									<div class="card border-0 border-radius-0 box-shadow-1">
-										<div class="card-body p-3 z-index-1">
-											<a href="demo-education-blog-post.html">
-												<img class="card-img-top border-radius-0 mb-2" src="{{ asset('assets/img/demos/education/blog/blog-3.jpg') }}" alt="Card Image">
-											</a>
-											<p class="text-uppercase text-color-default text-1 my-2">
-												<time pubdate datetime="2023-01-10">10 Jan 2023</time> 
-												<span class="opacity-3 d-inline-block px-2">|</span> 
-												3 Comments 
-												<span class="opacity-3 d-inline-block px-2">|</span> 
-												John Doe
-											</p>
-											<div class="card-body p-0">
-												<h4 class="card-title text-5 font-weight-semi-bold pb-1 mb-2"><a class="text-color-secondary text-decoration-none" href="demo-education-blog-post.html">Lorem ipsum dolor sit amet</a></h4>
-												<p class="card-text mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra lorem , consectetur adipiscing elit...</p>
-												<a href="demo-education-blog-post.html" class="btn btn-link font-weight-semibold text-decoration-none text-2 ps-0">READ MORE</a>
-											</div>
-										</div>
-									</div>
-								</article>
-							</div>
-
 						</div>
 					</div>
 				</section>
 
-				<section class="section section-background custom-section-background-2 bg-color-light border-0 m-0" style="background-image: url(img/demos/education/backgrounds/background-2.jpg); background-position: 0 100%; background-repeat: no-repeat; background-size: contain;">
-					<div class="container position-relative my-4">
+				<div id="textimonialsCarousel" class="owl-carousel owl-theme full-width nav-style-1 nav-arrows-thin nav-font-size-lg custom-nav-1 custom-nav-1-pos-4 manual p-relative mb-0">
+					<div class="container-fluid">
+						<div class="row align-items-center bg-color-tertiary">
+							<div class="col-xl-6 p-0">
+								<div data-plugin-before-after data-plugin-options="{'before_label': '', 'after_label': ''}">
+									<!-- The before image is first -->
+									<img src="{{ asset('assets/img/demos/dentist/generic/before-after-1.jpg') }}" />
+									<!-- The after image is last -->
+									<img src="{{ asset('assets/img/demos/dentist/generic/before-after-2.jpg') }}" />
+								</div>
+							</div>
+							<div class="col-xl-6 p-0 bg-color-tertiary text-center text-color-light">
+								<div class="d-flex align-items-center justify-content-center h-100 text-center custom-min-height-1">
 
-						<div class="custom-element custom-element-pos-3 appear-animation" data-appear-animation="expandIn" data-appear-animation-delay="200">
-							<div class="opacity-2" data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.8, 'transition': true, 'transitionDuration': 3000}">
-								<img class="icon-animated" width="157" height="157" src="{{ asset('assets/img/demos/education/elements/element-1.svg') }}" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-dark'}" />
+									<div class="testimonial testimonial-style-2 px-lg-5">
+										<div class="d-block">
+											<img height="80" width="80" src="{{ asset('assets/img/demos/dentist/icons/icon-8.svg') }}" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-stroke-color-light mt-1'}" />
+										</div>
+										<blockquote>
+											<p class="mb-0 text-color-light text-5 line-height-5">Cras a elit sit amet leo accumsan volutpat. Suspendisse hendreriast ehicula leo, vel efficitur felis ultrices non. Cras a elit sit amet leo acun volutpat.</p>
+										</blockquote>
+										<div class="testimonial-author">
+											<p><strong class="font-weight-extra-semi-bold text-color-light text-5-5">Janice Smith</strong></p>
+										</div>
+									</div>
+
+								</div>
 							</div>
 						</div>
+					</div>
+					<div class="container-fluid">
+						<div class="row align-items-center bg-color-primary">
+							<div class="col-xl-6 p-0">
+								<div data-plugin-before-after data-plugin-options="{'before_label': '', 'after_label': ''}">
+									<!-- The before image is first -->
+									<img src="{{ asset('assets/img/demos/dentist/generic/before-after-1.jpg') }}" />
+									<!-- The after image is last -->
+									<img src="{{ asset('assets/img/demos/dentist/generic/before-after-2.jpg') }}" />
+								</div>
+							</div>
+							<div class="col-xl-6 p-0 bg-color-primary text-center text-color-light">
+								<div class="d-flex align-items-center justify-content-center h-100 text-center custom-min-height-1">
 
-						<div class="row justify-content-end mb-4">
-							<div class="col-lg-6 py-4">
+									<div class="testimonial testimonial-style-2 px-lg-5">
+										<div class="d-block">
+											<img height="80" width="80" src="{{ asset('assets/img/demos/dentist/icons/icon-8.svg') }}" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-stroke-color-light mt-1'}" />
+										</div>
+										<blockquote>
+											<p class="mb-0 text-color-light text-5 line-height-5">Cras a elit sit amet leo accumsan volutpat. Suspendisse hendreriast ehicula leo, vel efficitur felis ultrices non.</p>
+										</blockquote>
+										<div class="testimonial-author">
+											<p><strong class="font-weight-extra-semi-bold text-color-light text-5-5">Alice Smith</strong></p>
+										</div>
+									</div>
 
-								<div class="row">
-									<div class="col">
-										<div class="feature-box feature-box-style-5">
-											<div class="feature-box-icon appear-animation" data-appear-animation="fadeInLeftShorterPlus" data-appear-animation-delay="100">
-												<img class="icon-animated" width="50" src="{{ asset('assets/img/demos/education/icons/icon-medal.svg') }}" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary'}" />
-											</div>
-											<div class="feature-box-info">
-												<div class="overflow-hidden">
-													<h2 class="text-color-secondary font-weight-semi-bold text-6 line-height-1 mb-2 pb-1 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="100">National Awards</h2>
-												</div>
-												<p class="text-3-5 line-height-9 mb-5 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="100">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis elit vitae enim vehicula fermentum consectetur adipiscing elit.</p>
-											</div>
-										</div>
-									</div>
 								</div>
-								<div class="row">
-									<div class="col">
-										<div class="feature-box feature-box-style-5">
-											<div class="feature-box-icon appear-animation" data-appear-animation="fadeInLeftShorterPlus" data-appear-animation-delay="200">
-												<img class="icon-animated" width="50" src="{{ asset('assets/img/demos/education/icons/icon-list.svg') }}" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary'}" />
-											</div>
-											<div class="feature-box-info">
-												<div class="overflow-hidden">
-													<h2 class="text-color-secondary font-weight-semi-bold text-6 line-height-1 mb-2 pb-1 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200">Many Courses</h2>
-												</div>
-												<p class="text-3-5 line-height-9 mb-5 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="200">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis elit vitae enim vehicula fermentum consectetur adipiscing elit.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col">
-										<div class="feature-box feature-box-style-5">
-											<div class="feature-box-icon appear-animation" data-appear-animation="fadeInLeftShorterPlus" data-appear-animation-delay="300">
-												<img class="icon-animated" width="50" src="{{ asset('assets/img/demos/education/icons/icon-badge.svg') }}" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary'}" />
-											</div>
-											<div class="feature-box-info">
-												<div class="overflow-hidden">
-													<h2 class="text-color-secondary font-weight-semi-bold text-6 line-height-1 mb-2 pb-1 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="300">The Best Instructors</h2>
-												</div>
-												<p class="text-3-5 line-height-9 mb-0 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="300">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis elit vitae enim vehicula fermentum consectetur adipiscing elit. </p>
-											</div>
-										</div>
-									</div>
-								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="container-fluid py-4">
+					<div class="row align-items-center text-center py-5">
+						<div class="col-sm-4 col-lg-2 mb-5 mb-lg-0">
+							<img src="{{ asset('assets/img/logos/logo-8.png') }}" alt="" class="img-fluid" style="max-width: 90px;">
+						</div>
+						<div class="col-sm-4 col-lg-2 mb-5 mb-lg-0">
+							<img src="{{ asset('assets/img/logos/logo-9.png') }}" alt="" class="img-fluid" style="max-width: 140px;">
+						</div>
+						<div class="col-sm-4 col-lg-2 mb-5 mb-lg-0">
+							<img src="{{ asset('assets/img/logos/logo-10.png') }}" alt="" class="img-fluid" style="max-width: 140px;">
+						</div>
+						<div class="col-sm-4 col-lg-2 mb-5 mb-sm-0">
+							<img src="{{ asset('assets/img/logos/logo-11.png') }}" alt="" class="img-fluid" style="max-width: 140px;">
+						</div>
+						<div class="col-sm-4 col-lg-2 mb-5 mb-sm-0">
+							<img src="{{ asset('assets/img/logos/logo-12.png') }}" alt="" class="img-fluid" style="max-width: 100px;">
+						</div>
+						<div class="col-sm-4 col-lg-2">
+							<img src="{{ asset('assets/img/logos/logo-13.png') }}" alt="" class="img-fluid" style="max-width: 100px;">
+						</div>
+					</div>
+				</div>
+
+				<section class="section border-0 bg-color-light m-0 py-5">
+					<div class="container py-5 my-2">
+						<div class="row">
+							<div class="col text-center">
+								<h2 class="d-inline-block line-height-5 text-4 positive-ls-3 font-weight-semibold text-color-primary mb-2 appear-animation" data-appear-animation="fadeInUpShorter">BOOK ONLINE</h2>
+								<h3 class="text-color-dark text-9 line-height-3 text-transform-none font-weight-semibold mb-4 mb-lg-3 mb-xl-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="250">Request an Appointment</h3>
+								<p class="text-3-5 font-weight-medium pb-1 mb-4 mb-lg-2 mb-xl-4 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="500">Cras a elit sit amet leo accumsan volutpat. Suspendisse hendreriast ehicula leo, vel efficitur felis ultrices non.</p>
+
+								<form class="contact-form text-start appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="500" action="php/contact-form.php" method="POST">
+								    <div class="contact-form-success alert alert-success d-none mt-4">
+								        <strong>Success!</strong> Your message has been sent to us.
+								    </div>
+
+								    <div class="contact-form-error alert alert-danger d-none mt-4">
+								        <strong>Error!</strong> There was an error sending your message.
+								        <span class="mail-error-message text-1 d-block"></span>
+								    </div>
+
+								    <div class="row row-gutter-sm">
+								        <div class="form-group col-lg-6 mb-4">
+								            <input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control border-0 p-3 box-shadow-none" name="name" id="name" required placeholder="Your Name">
+								        </div>
+								        <div class="form-group col-lg-6 mb-4">
+								            <input type="text" value="" data-msg-required="Please enter your phone number." maxlength="100" class="form-control border-0 p-3 box-shadow-none" name="phone" id="phone" required placeholder="Phone Number">
+								        </div>
+								    </div>
+								    <div class="row row-gutter-sm">
+								        <div class="form-group col-lg-6 mb-4">
+								            <input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control border-0 p-3 box-shadow-none" name="email" id="email" required placeholder="E-mail Address">
+								        </div>
+								        <div class="form-group col-lg-6 mb-4">
+								            <input type="text" value="" data-msg-required="Please enter the service." maxlength="100" class="form-control border-0 p-3 box-shadow-none" name="service" id="service" required placeholder="Service">
+								        </div>
+								    </div>
+								    <div class="row">
+								        <div class="form-group col mb-4">
+								            <textarea maxlength="5000" data-msg-required="Please enter the details." rows="10" class="form-control border-0 p-3 box-shadow-none" name="message" id="message" required placeholder="Details"></textarea>
+								        </div>
+								    </div>
+								    <div class="row">
+								        <div class="form-group col text-end mb-0">
+								            <button type="submit" class="btn btn-secondary border-0 text-3-5 font-weight-semi-bold btn-px-5 btn-py-3">Submit</button>
+								        </div>
+								    </div>
+								</form>
 
 							</div>
 						</div>
 					</div>
 				</section>
 
-			</div>
+			</div> 
 
-            <!-- Content
-    ============================================= -->
-    <section id="content">
-
-        <div class="content-wrap p-0 mb-4">
-            @yield('content')
-        </div>
-    </section>
-
-
-			<footer id="footer" class="footer-reveal bg-color-secondary border-0 mt-0">
-				<div class="container py-5">
-					<div class="row py-5">
-						<div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-
-							<a href="demo-education.html" class="d-inline-block mb-3">
-								<img alt="Porto" width="115" height="30" src="{{ asset('assets/img/demos/education/logo-footer.png') }}">
+			<footer id="footer" class="border-0 mt-0">
+				<div class="container pt-5">
+					<div class="row text-center text-lg-start font-weight-semi-bold text-color-light text-4 py-3">
+					</div>
+				</div>
+				<div class="container pb-5">
+					<div class="row text-center text-md-start py-4 my-5">
+						<div class="col-md-6 col-lg-3 align-self-center text-center text-md-start text-lg-center mb-5 mb-lg-0">
+							<a href="#" class="text-decoration-none">
+								<img src="{{ asset('assets/img/sempol/logo.png') }}" class="img-fluid">
 							</a>
-
-							<ul class="social-icons social-icons-clean social-icons-icon-light">
-								<li>
-									<a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+						</div>
+						<div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
+							<h5 class="text-transform-none font-weight-bold text-color-light text-4-5 mb-4">Tentang Sekolah</h5>
+							<ul class="list list-unstyled">
+								<li class="pb-1 mb-2">
+									<span class="d-block font-weight-semibold line-height-1 text-color-grey text-3-5">Alamat</span> 
+									<a href="demo-auto-services-contact.html#get-direction" class="text-color-light font-weight-medium text-3-5">Jl. Raya Kawah Ijen, Kabupaten Bondowoso</a>
 								</li>
-								<li>
-									<a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+								<li class="pb-1 mb-2">
+									<span class="d-block font-weight-semibold line-height-1 text-color-grey text-3-5 mb-1">Kontak Kami</span>
+									<ul class="list list-unstyled font-weight-light text-3-5 mb-0">
+										<li class="text-color-light line-height-3 mb-0">
+											Telepon: <a href="#" class="text-decoration-none text-color-light text-color-hover-default">08xxxxx</a>
+										</li>
+									</ul>
 								</li>
-								<li>
-									<a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+								<li class="pb-1 mb-2">
+									<span class="d-block font-weight-semibold line-height-1 text-color-grey text-3-5">EMAIL</span>
+									<a href="mailto:mail@example.com" class="text-decoration-none font-weight-light text-3-5 text-color-light text-color-hover-default">smkn1_sempol@yahoo.co.id</a>
 								</li>
 							</ul>
-
-							<p class="text-3 mt-4 mb-0 line-height-8 text-color-tertiary opacity-6">Porto Education. © 2023.<br> All Rights Reserved</p>
-
-						</div>
-						<div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-							<h4 class="font-weight-bold text-5">About Us</h4>
-							<ul class="list list-unstyled text-color-tertiary opacity-6">
-								<li class="mb-1">
-									Porto Education
+							<ul class="social-icons social-icons-medium">
+								<li class="social-icons-instagram">
+									<a href="http://www.instagram.com/" class="no-footer-css" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
 								</li>
-								<li class="mb-1">
-									123 Porto Blvd, Suite 100
+								<li class="social-icons-twitter mx-2">
+									<a href="http://www.twitter.com/" class="no-footer-css" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
 								</li>
-								<li class="mb-1">
-									New York, NY
-								</li>
-								<li class="mb-1">
-									Phone: <a href="tel:1234567890" class="text-decoration-none text-color-tertiary text-color-hover-primary">123-456-7890</a>
-								</li>
-								<li>
-									Email: <a href="mailto:email@domain.com" class="text-decoration-none text-color-tertiary text-color-hover-primary">porto@domain.com</a>
+								<li class="social-icons-facebook">
+									<a href="http://www.facebook.com/" class="no-footer-css" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
 								</li>
 							</ul>
 						</div>
-						<div class="col-md-4 col-lg-2 mb-4 mb-lg-0">
-							<h4 class="font-weight-bold text-5">Navigation</h4>
-							<ul class="list list-unstyled opacity-6">
-								<li class="mb-1">
-									<a href="demo-education.html" class="text-decoration-none text-color-tertiary text-color-hover-primary link-hover-style-1">- Home</a>
-								</li>
-								<li class="mb-1">
-									<a href="demo-education-about-us.html" class="text-decoration-none text-color-tertiary text-color-hover-primary link-hover-style-1">- About Us</a>
-								</li>
-								<li class="mb-1">
-									<a href="demo-education-courses.html" class="text-decoration-none text-color-tertiary text-color-hover-primary link-hover-style-1">- Courses</a>
-								</li>
-								<li class="mb-1">
-									<a href="demo-education-instructors.html" class="text-decoration-none text-color-tertiary text-color-hover-primary link-hover-style-1">- Instructors</a>
-								</li>
-								<li class="mb-1">
-									<a href="demo-education-blog.html" class="text-decoration-none text-color-tertiary text-color-hover-primary link-hover-style-1">- Blog</a>
-								</li>
-								<li>
-									<a href="demo-education-contact-us.html" class="text-decoration-none text-color-tertiary text-color-hover-primary link-hover-style-1">- Contact Us</a>
-								</li>
+						<div class="col-md-6 col-lg-3 offset-lg-1">
+							<h5 class="text-transform-none font-weight-bold text-color-light text-4-5 mb-4">Jadwal Sekolah</h5>
+							<ul class="list list-unstyled list-inline mb-0">
+								<li>Senin - Kamis: 06.45 - 13:00 WIB</li>
+								<li>Jumat: 06:30 - 11:00 WIB</li>
+								<li>Sabtu-Minggu: Tutup</li>
 							</ul>
 						</div>
-						<div class="col-md-4 col-lg-2 mb-4 mb-lg-0">
-							<h4 class="font-weight-bold text-5">Support</h4>
-							<ul class="list list-unstyled opacity-6">
-								<li class="mb-1">
-									<a href="demo-education.html" class="text-decoration-none text-color-tertiary text-color-hover-primary link-hover-style-1">- Documentation</a>
-								</li>
-								<li class="mb-1">
-									<a href="demo-education.html" class="text-decoration-none text-color-tertiary text-color-hover-primary link-hover-style-1">- Forums</a>
-								</li>
-								<li class="mb-1">
-									<a href="demo-education.html" class="text-decoration-none text-color-tertiary text-color-hover-primary link-hover-style-1">- Open a Ticket</a>
-								</li>
-								<li>
-									<a href="demo-education.html" class="text-decoration-none text-color-tertiary text-color-hover-primary link-hover-style-1">- FAQ's</a>
-								</li>
-							</ul>
-						</div>
-						<div class="col-md-4 col-lg-2 mb-4 mb-lg-0">
-							<h4 class="font-weight-bold text-5">More</h4>
-							<ul class="list list-unstyled opacity-6">
-								<li class="mb-1">
-									<a href="demo-education.html" class="text-decoration-none text-color-tertiary text-color-hover-primary link-hover-style-1">- Terms of Use</a>
-								</li>
-								<li>
-									<a href="demo-education.html" class="text-decoration-none text-color-tertiary text-color-hover-primary link-hover-style-1">- Privacy Policy</a>
-								</li>
-							</ul>
+					</div>
+					<div class="row">
+						<div class="col">
+							<p class="text-center text-color-light opacity-5 text-3 mb-0">Porto Dentist © 2023. All Rights Reserved.</p>
 						</div>
 					</div>
 				</div>
 			</footer>
 		</div>
 	</body>
-    </html>
+</html>
+<!-- Vendor -->
+<script src="{{ asset('assets/vendor/plugins/js/plugins.min.js') }}"></script>
+<script src="{{ asset('assets/vendor/twentytwenty/js/jquery.event.move.js') }}"></script>
+<script src="{{ asset('assets/vendor/twentytwenty/js/jquery.twentytwenty.js') }}"></script>
 
-    <!-- JavaScript ============================ -->
-		<!-- Vendor -->
-		<script src="{{ asset('assets/vendor/plugins/js/plugins.min.js') }}"></script>
-		<script src="{{ asset('assets/vendor/jquery.countdown/jquery.countdown.min.js') }}"></script>
+<!-- Theme Base, Components and Settings -->
+<script src="{{ asset('assets/js/theme.js') }}"></script>
 
-		<!-- Theme Base, Components and Settings -->
-		<script src="{{ asset('assets/js/theme.js') }}"></script>
+<!-- Current Page Vendor and Views -->
+<script src="{{ asset('assets/js/views/view.contact.js') }}"></script>
 
-		{{-- <!-- Theme Custom -->
-		<script src="{{ asset('assets/js/custom.js') }}"></script> --}}
+<!-- Demo -->
+<script src="{{ asset('assets/js/demos/demo-dentist.js') }}"></script>
 
-		<!-- Theme Initialization Files -->
-		<script src="{{ asset('assets/js/theme.init.js') }}"></script>
+<!-- Theme Custom -->
+<script src="{{ asset('assets/js/custom.js') }}"></script>
 
-<!-- Footer Scripts
-============================================= -->
-{{-- <script src="{{ asset('assets/js/functions.js') }}"></script> --}}
+<!-- Theme Initialization Files -->
+<script src="{{ asset('assets/js/theme.init.js') }}"></script>
+
 <script>
     $.ajaxSetup({
         headers: {

@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @push('css')
-    <link rel="stylesheet" href="{{ asset('assets/css/demos/demo-education.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('assets/css/demos/demo-dentist.css') }}" type="text/css" />
     {{-- <style>
         .img-fit {
             display: block;
