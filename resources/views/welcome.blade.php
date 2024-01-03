@@ -33,8 +33,8 @@
                         <div class="container p-relative z-index-3 h-100">
                             <div class="row align-items-center h-100">
                                 <div class="col-lg-8 col-xl-6 text-center text-md-start">
-                                    <h2 class="font-weight-semi-bold text-color-dark text-9 text-md-12 line-height-2 mb-3 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="200" data-plugin-options="{'minWindowWidth': 0}">Affordable Full-Service Dental Care in LA</h2>
-                                    <p class="font-weight-medium text-4-5 line-height-5 mb-2 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="400" data-plugin-options="{'minWindowWidth': 0}">Lorem ipsum dolor sit amet, consectetur adipiscing elit vestibulum sed euismod dui.</p>
+                                    <h2 class="font-weight-semi-bold text-color-dark text-9 text-md-12 line-height-2 mb-3 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="200" data-plugin-options="{'minWindowWidth': 0}">SMKN 1 SEMPOL BONDOWOSO</h2>
+                                    {{-- <p class="font-weight-medium text-4-5 line-height-5 mb-2 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="400" data-plugin-options="{'minWindowWidth': 0}">Lorem ipsum dolor sit amet, consectetur adipiscing elit vestibulum sed euismod dui.</p> --}}
                                 </div>
                             </div>
                         </div>
@@ -42,13 +42,13 @@
 
                     <!-- Carousel Slide 2 -->
                     <div class="owl-item p-relative overflow-hidden">
-                        <div class="background-image-wrapper p-absolute d-none d-lg-block w-100 h-100 top-0 right-0 bottom-0" style="background-image: url(img/demos/dentist/slides/slide-dentist-2-1.jpg); background-size: cover;"></div>
+                        <div class="background-image-wrapper p-absolute d-none d-lg-block w-100 h-100 top-0 right-0 bottom-0" style="background-image: url({{ asset('assets/img/sempol/header.jpeg') }}); background-size: cover;"></div>
 
                         <div class="container p-relative z-index-3 h-100">
                             <div class="row align-items-center justify-content-end h-100">
                                 <div class="col-lg-8 col-xl-6 text-center text-md-start">
-                                    <h2 class="font-weight-semi-bold text-color-dark text-9 text-md-12 line-height-2 mb-3 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="200" data-plugin-options="{'minWindowWidth': 0}">Dental Care in LA Affordable Full-Service</h2>
-                                    <p class="font-weight-medium text-4-5 line-height-5 mb-2 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="400" data-plugin-options="{'minWindowWidth': 0}">Lorem ipsum dolor sit amet, consectetur adipiscing elit vestibulum sed euismod dui.</p>
+                                    {{-- <h2 class="font-weight-semi-bold text-color-dark text-9 text-md-12 line-height-2 mb-3 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="200" data-plugin-options="{'minWindowWidth': 0}">SMKN 1 Sempol</h2>
+                                    <p class="font-weight-medium text-4-5 line-height-5 mb-2 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="400" data-plugin-options="{'minWindowWidth': 0}">Lorem ipsum dolor sit amet, consectetur adipiscing elit vestibulum sed euismod dui.</p> --}}
                                 </div>
                             </div>
                         </div>
@@ -63,11 +63,11 @@
         </div>
 
         <div class="p-absolute custom-el-pos-1 d-none d-xl-block z-index-2">
-            <img width="353" height="407" src="img/demos/dentist/generic/generic-3.svg" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-tertiary'}" />
+            <img width="353" height="407" src="{{ asset('assets/img/demos/dentist/generic/generic-3.svg') }}" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-tertiary'}" />
         </div>
 
         <div class="p-absolute custom-el-pos-2 rotate-l-65 d-none d-xl-block z-index-2">
-            <img width="330" height="346" src="img/demos/dentist/generic/generic-4.svg" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary'}" />
+            <img width="330" height="346" src="{{ asset('assetsimg/demos/dentist/generic/generic-4.svg') }}" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary'}" />
         </div>
     </div>
 
@@ -76,30 +76,42 @@
             <div class="row align-items-center text-center text-md-start">
                 <div class="col-lg-9 mb-3 mb-lg-0">
                     <p class="text-color-light text-4-5 font-weight-medium line-height-4 mb-0">
-                        <strong>Book Appointment Online</strong> - Need Immediate Confirmation? Call Us at <u>888-123-4567</u>
+                        <strong>Selamat Datang di Website SMKN 1 SEMPOL</strong> 
+                        {{-- <u>###</u> --}}
                     </p>
                 </div>
-                <div class="col-lg-3 text-center text-md-start text-lg-end">
+                {{-- <div class="col-lg-3 text-center text-md-start text-lg-end">
                     <a href="demo-dentist-contact.html#book" class="btn btn-secondary border-0 text-3-5 font-weight-semi-bold btn-px-5 btn-py-3">Book Appointment</a>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
 
     <div class="container my-5">
         <div class="row">
-            <div class="col py-4">
+            <div class="col py-2">
 
                 <div class="featured-boxes featured-boxes-style-9">
                     <div class="row">
+                        <div class="col-lg-4 px-lg-3">
+                            <div class="featured-box featured-box-secondary">
+                                <div class="box-content">
+                                    <span class="icon-featured icon-featured-lg">
+                                        <img height="100" src="{{ asset('assets/img/demos/dentist/icons/icon-appointment.svg') }}" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-tertiary mt-1'}" />
+                                    </span>
+                                    <h4 class="font-weight-semi-bold mt-3 pt-2 mb-3 text-5-5 text-color-dark">Kompetensi</h4>
+                                    <p class="mb-0 text-3-5 font-weight-medium">Jumlah</p>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-lg-4 px-lg-3">
                             <div class="featured-box featured-box-primary">
                                 <div class="box-content">
                                     <span class="icon-featured icon-featured-lg">
                                         <img height="100" src="{{ asset('assets/img/demos/dentist/icons/icon-1.svg') }}" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-tertiary mt-1'}" />
                                     </span>
-                                    <h4 class="font-weight-semi-bold mt-3 pt-2 mb-3 text-5-5 text-color-dark">Convenient Location</h4>
-                                    <p class="mb-0 text-3-5 font-weight-medium">Lorem ipsum dolor sit amet, consec tetur adipiscing el nc viverra erat orcias ac auctor.</p>
+                                    <h4 class="font-weight-semi-bold mt-3 pt-2 mb-3 text-5-5 text-color-dark">Peserta Didik</h4>
+                                    <p class="mb-0 text-3-5 font-weight-medium">Jumlah</p>
                                 </div>
                             </div>
                         </div>
@@ -109,8 +121,8 @@
                                     <span class="icon-featured icon-featured-lg">
                                         <img height="100" src="{{ asset('assets/img/demos/dentist/icons/icon-2.svg') }}" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-tertiary mt-1'}" />
                                     </span>
-                                    <h4 class="font-weight-semi-bold mt-3 pt-2 mb-3 text-5-5 text-color-dark">Full-Service</h4>
-                                    <p class="mb-0 text-3-5 font-weight-medium">Lorem ipsum dolor sit amet, con sectetur adipiscing el nc viverra eratorci ac auctor.</p>
+                                    <h4 class="font-weight-semi-bold mt-3 pt-2 mb-3 text-5-5 text-color-dark">Guru</h4>
+                                    <p class="mb-0 text-3-5 font-weight-medium">Jumlah</p>
                                 </div>
                             </div>
                         </div>
@@ -120,8 +132,8 @@
                                     <span class="icon-featured icon-featured-lg">
                                         <img height="100" src="{{ asset('assets/img/demos/dentist/icons/icon-3.svg') }}" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-tertiary mt-1'}" />
                                     </span>
-                                    <h4 class="font-weight-semi-bold mt-3 pt-2 mb-3 text-5-5 text-color-dark">Top Rated Dentists</h4>
-                                    <p class="mb-0 text-3-5 font-weight-medium">Lorem ipsum dolor sit amet, consec tetur adipiscing el nc viverra eratorciac auctor.</p>
+                                    <h4 class="font-weight-semi-bold mt-3 pt-2 mb-3 text-5-5 text-color-dark">Staf</h4>
+                                    <p class="mb-0 text-3-5 font-weight-medium">Jumlah</p>
                                 </div>
                             </div>
                         </div>
@@ -132,7 +144,7 @@
         </div>
     </div>
 
-    <section class="section border-0 bg-color-light m-0 py-5">
+    {{-- <section class="section border-0 bg-color-light m-0 py-5">
         <div class="container py-5 my-2">
             <div class="row align-items-xl-center">
                 <div class="col-lg-6 mb-5 mb-lg-0 text-center">
@@ -171,9 +183,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
-    <section class="section border-0 bg-transparent m-0 py-5">
+    {{-- <section class="section border-0 bg-transparent m-0 py-5">
         <div class="container-fluid">
             <div class="row px-4">
 
@@ -307,9 +319,9 @@
 
             </div>
         </div>
-    </section>
+    </section> --}}
 
-    <section class="section border-0 bg-color-light m-0 py-5">
+    {{-- <section class="section border-0 bg-color-light m-0 py-5">
         <div class="container py-5 my-2">
             <div class="row">
                 <div class="col-lg-6 mb-5 mb-lg-0">
@@ -345,9 +357,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
-    <section class="section border-0 bg-color-transparent m-0 py-5">
+    {{-- <section class="section border-0 bg-color-transparent m-0 py-5">
         <div class="container py-5 my-2">
             <div class="row">
                 <div class="col text-center">
@@ -490,9 +502,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
-    <div id="textimonialsCarousel" class="owl-carousel owl-theme full-width nav-style-1 nav-arrows-thin nav-font-size-lg custom-nav-1 custom-nav-1-pos-4 manual p-relative mb-0">
+    {{-- <div id="textimonialsCarousel" class="owl-carousel owl-theme full-width nav-style-1 nav-arrows-thin nav-font-size-lg custom-nav-1 custom-nav-1-pos-4 manual p-relative mb-0">
         <div class="container-fluid">
             <div class="row align-items-center bg-color-tertiary">
                 <div class="col-xl-6 p-0">
@@ -551,9 +563,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
-    <div class="container-fluid py-4">
+    {{-- <div class="container-fluid py-4">
         <div class="row align-items-center text-center py-5">
             <div class="col-sm-4 col-lg-2 mb-5 mb-lg-0">
                 <img src="{{ asset('assets/img/logos/logo-8.png') }}" alt="" class="img-fluid" style="max-width: 90px;">
@@ -574,9 +586,9 @@
                 <img src="{{ asset('assets/img/logos/logo-13.png') }}" alt="" class="img-fluid" style="max-width: 100px;">
             </div>
         </div>
-    </div>
+    </div> --}}
 
-    <section class="section border-0 bg-color-light m-0 py-5">
+    {{-- <section class="section border-0 bg-color-light m-0 py-5">
         <div class="container py-5 my-2">
             <div class="row">
                 <div class="col text-center">
@@ -625,7 +637,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
 </div> 
 @endsection

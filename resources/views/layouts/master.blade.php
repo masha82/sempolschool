@@ -131,7 +131,7 @@
 										<nav class="header-nav-top">
 											<ul class="nav nav-pills p-relative bottom-2">
 												<li class="nav-item py-2 d-none d-md-inline-flex">
-													<a href="mailto:mail@domain.com" class="text-2 font-weight-semibold text-color-default text-color-hover-tertiary">
+													<a href="#" class="text-2 font-weight-semibold text-color-default text-color-hover-tertiary">
 														<i class="icon-envelope icons text-color-tertiary p-relative top-3 text-4-5"></i> smkn1_sempol@yahoo.co.id</a>
 												</li>
 												<li class="nav-item py-2 d-none d-sm-inline-flex pe-2">

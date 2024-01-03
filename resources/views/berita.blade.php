@@ -5,7 +5,7 @@
 @section('content')
 <section id="page-title">
     <div class="container clearfix">
-        <h1>Prestasi SMKN 1 Sempol</h1>
+        <h1>Berita Tentang SMKN 1 Sempol</h1>
     </div>
 </section>
         <div class="container clearfix">
