@@ -289,8 +289,8 @@
 						<div class="col-md-6 col-lg-3 offset-lg-1">
 							<h5 class="text-transform-none font-weight-bold text-color-light text-4-5 mb-4">Jadwal Sekolah</h5>
 							<ul class="list list-unstyled list-inline mb-0">
-								<li>Senin - Kamis: 06.45 - 13:00 WIB</li>
-								<li>Jumat: 06:30 - 11:00 WIB</li>
+								<li>Senin - Kamis: 06.45 - 15:30 WIB</li>
+								<li>Jumat: 06:30 - 11:30 WIB</li>
 								<li>Sabtu-Minggu: Tutup</li>
 							</ul>
 						</div>
