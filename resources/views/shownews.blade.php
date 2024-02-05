@@ -20,11 +20,24 @@
                         </ul>
 
                     </div>
-
-                    <div class="entry-image">
-                        <a href="demo-news-single.html"><img src="{{asset('gambar_berita/' . $data->foto)}}" alt="Image 3"></a>
-
-                    </div>
+                    {{-- <div class="row">
+                        <div class="col">
+                            <div class="blog-posts single-post">
+                                <article class="post post-large blog-single-post border-0 m-0 p-0">
+                                    <div class="post-image ms-0">
+                                        <a href="blog-post.html">
+                                            <img src="{{ asset('gambar_berita/' . $item->foto) }}" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" alt="">
+                                        </a>
+                                    </div>            
+                                </article>
+                            </div>
+                        </div>
+                    </div> --}}
+                    <div class="post-image ms-0">
+                        <a href="blog-post.html">
+                            <img src="{{ asset('gambar_berita/' . $data->foto) }}" class="img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" alt="">
+                        </a>
+                    </div> 
 
                     <div class="entry-content mt-0">
 
@@ -47,24 +60,34 @@
                             @foreach ($berita as $item)
                                 <article class="entry col-12">
                                     <div class="grid-inner row gutter-20">
-                                        <div class="col-md-4">
-                                            <a class="entry-image" href="#"><img
-                                                    src="{{ asset('gambar_berita/' . $item->foto) }}"
-                                                    alt="Image"></a>
-                                        </div>
                                         <div class="col-md-8">
-                                            <div class="entry-title title-xs">
-                                                {{-- <div class="entry-categories"><a href="demo-blog-categories.html">Market</a></div> --}}
-                                                <h3><a href="{{route('berita.show', $item->id)}}"
+                                            {{-- <div class="entry-title title-xs"> --}}
+                                                {{-- <div class="entry-categories"><a href="demo-blog-categories.html">Market</a></div>
+                                                <h3><a href="{{route('berita.show', $item->slug)}}"
                                                        class="stretched-link color-underline">{{ $item->judul }}</a>
                                                 </h3>
-                                            </div>
-                                            <div class="entry-meta">
+                                                </div> --}}
+                                            {{-- <div class="entry-meta">
                                                 <ul>
                                                     <li><a
                                                             href="#">{{ \Carbon\Carbon::parse($item->created_at)->isoFormat('dddd, D MMMM Y') }}</a>
                                                     </li>
                                                 </ul>
+                                            </div> --}}
+                                            <div class="mt-4 pt-2 post-author">
+                                                <h4 class="mb-3"><a href="{{route('berita.show', $item->slug)}}"
+                                                    class="stretched-link color-underline">{{ $item->judul }}</a>
+                                                </h4>
+                                                <div class="img-thumbnail img-thumbnail-no-borders d-block pb-3">
+                                                    <a class="entry-image" href="#"><img
+                                                        src="{{ asset('gambar_berita/' . $item->foto) }}"
+                                                        alt="Image">
+                                                    </a>
+                                                    <ul>
+                                                        <li><a>{{ \Carbon\Carbon::parse($item->created_at)->isoFormat('dddd, D MMMM Y') }}</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

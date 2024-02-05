@@ -638,6 +638,55 @@
             </div>
         </div>
     </section> --}}
-
 </div> 
+<section>
+    <div class="container clearfix mt-5">
+        <div class="row clearfix">
+            <!-- Second Posts Area
+                ============================================= -->
+            <div class="col-lg-12">
+                <!-- Gallery Slider
+                    ============================================= -->
+                <div class="clearfix">
+                    <h4 style="background: #e2e62f" class="ls1 text-uppercase fw-bold">
+                        BERITA/INFORMASI</h4>
+                    <!-- Flex Thumbs Slider
+                        ============================================= -->
+                    <div class="row">
+                        @foreach ($berita as $post)
+                            <div class="col-md-3 mt-0">
+                                <!-- Post Article -->
+                                <div class="posts-md">
+                                    <div class="entry">
+                                        <div class="entry-image">
+                                            <div class="col-md-12 col-lg-12 mb-lg-0 text-center">
+                                            <a href="{{route('berita.show',$post->slug)}}"><img class="img-fluid appear-animation animated fadeInUpShorter appear-animation-visible"
+                                                    src="{{ asset('gambar_berita/' . $post->foto) }}" alt="Image 3"></a>
+                                            </div>
+                                            <div class="entry-categories"><a href="{{route('berita.show',$post->slug)}}"
+                                                    class="bg-lifestyle">Berita</a>
+                                            </div>
+                                        </div>
+                                        <div class="entry-title title-sm nott">
+                                            <h3 class="mb-0"><a href="{{route('berita.show',$post->slug)}}">{{ $post->judul }}</a>
+                                            </h3>
+                                        </div>
+                                        <div class="entry-meta">
+                                            <ul>
+                                                <li><span>Penyunting: </span><a>{{ $post->editor }}</a>
+                                                </li>
+                                                <li><i class="icon-time"></i><a>{{ \Carbon\Carbon::parse($post->created_at)->isoFormat('D MMMM Y') }}</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                        {{ $berita->links() }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 @endsection

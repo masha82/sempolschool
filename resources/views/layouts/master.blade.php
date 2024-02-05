@@ -162,6 +162,7 @@
 										<div class="header-nav-main header-nav-main-square header-nav-main-text-capitalize header-nav-main-text-size-4 header-nav-main-dropdown-no-borders header-nav-main-arrows header-nav-main-full-width-mega-menu header-nav-main-mega-menu-bg-hover header-nav-main-effect-2">
 											<nav class="collapse">
 												<ul class="nav nav-pills" id="mainNav">
+													@guest
 													<li class="dropdown">
 														<a href="{{ url('/') }}" class="nav-link dropdown-toggle">Beranda</a>
 														<ul class="dropdown-menu">
@@ -214,11 +215,7 @@
 															<li><a href="#" class="dropdown-item">Video Pembelajaran</a></li>
 														</ul>
 													</li>
-													<li>
-														<a href="#" class="nav-link active">
-															Login
-														</a>
-													</li>
+													@endguest
 												</ul>
 											</nav>
 										</div>
