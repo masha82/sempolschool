@@ -21,7 +21,7 @@
                             {{ session('success') }}
                         </div>
                     @endif
-                    <h6 class="mb-4">Basic Form</h6>
+                    {{-- <h6 class="mb-4">Basic Form</h6> --}}
                     <form action="{{ route('berita.store') }}" method="post" enctype="multipart/form-data">
                     @csrf
                     @method('POST')
